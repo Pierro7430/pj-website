@@ -1,0 +1,16 @@
+{
+  "name": "pj-website",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "events": "^3.3.0",
+    "sass": "^1.53.0",
+    "three": "^0.141.0",
+    "vite": "^2.9.9"
+  }
+}
