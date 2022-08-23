@@ -1,11 +1,266 @@
 
-.experience {
+.header {
     position: fixed;
-    width: 100vw;
-    height: 100vh;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40px;
+    padding: 0px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    z-index: 1000;
+    box-sizing: border-box;
 
-    .experience-canvas {
+    
+        .logo {
+    
+        }
+    
+        .nav {
+            display: flex;
+            justify-content: center;
+            flex-grow: 1;
+            gap: 50px;
+    
+            a {
+                color: $color-white;
+                text-decoration: none;
+                font-size: $font-medium;
+                font-weight: 600;
+            }
+        }
+    
+        .theme {
+            display: flex;
+            gap: 10px;
+    
+        }
+    
+        
+}
+    
+.main {
+    .home {
+        position: relative;
         width: 100%;
+        height: calc(100vh - 120px);
+        background-color: $color-blue-primary;
+        padding: 80px 0px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        
+    
+        &_3D{     
+            height: 100%;
+            max-height: 800px;
+            aspect-ratio : 1 / 1;
+            background: $color-blue-darker;
+        }
+    
+        &_info {
+            position: absolute;
+            bottom: 20%; 
+            left: 0;
+            width: 100%;
+            padding: 0 50px;
+            box-sizing: border-box;
+            
+            &_title {
+                font-size: $font-h1;
+                font-weight: 900;
+            }
+
+            
+            &_text {
+                width: 40%;
+                color: $color-blue-lighter;
+                font-size: $font-medium;
+                font-weight: 600;
+                line-height: $font-large;
+                padding: 50px 0;
+            }
+            
+            &_btn {
+                text-decoration: none;
+                color: $color-blue-primary;
+                background-color: $color-green;
+                border-radius: 15px;
+                font-size: $font-regular;
+                font-weight: 900;
+                padding: 10px 25px;
+            }
+            
+        }
+    
+    }
+
+    .projects {
+        position: relative;
         width: 100%;
+        height: calc(100vh - 80px);
+        background-color: $color-blue-secondary;
+        padding: 60px 0 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 80px;
+
+        &_info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 40px;
+            width: 100%;
+            padding: 0 50px;
+            box-sizing: border-box;
+
+            &_title {
+                font-size: $font-h1;
+                font-weight: 900;
+
+            }
+
+            &_text {
+                font-size: $font-medium;
+                font-weight: 600;
+                line-height: $font-large;
+                
+            }
+        }
+
+        &_gallery {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 0 50px;
+            box-sizing: border-box;
+            
+            
+            
+
+            &_work {
+                width: 20%;
+                display: flex;
+                flex-direction: column;
+                gap: 15px;
+                
+
+                .project-link {
+                    width: 100%;
+                    aspect-ratio : 1 / 1;
+                    background-color: $color-blue-lighter;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+
+    .contact {
+        position: relative;
+        height: calc(100vh - 140px);
+        background-color: $color-blue-primary;
+        padding: 80px 50px 0;
+        display: flex;
+        justify-content: center;
+        text-align: center;
+
+        &_info {
+            position: absolute;
+            top: 0; 
+            left: 0;
+            width: 100%;
+            padding: 80px 50px 0;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+
+            
+            &_header {
+                display: flex;
+                align-items: baseline;
+                width: 100%;
+                gap: 80px;
+
+                .contact-title {
+                    font-size: $font-h1;
+                    font-weight: 900;
+                }
+                
+                .contact-social {
+                    display: flex;
+                    gap: 40px;
+
+                    &_link {
+                        width: 42px;
+                        height: 42px;
+                        border-radius: 21px;
+                        background-color: $color-green;  
+                    }
+                }
+            }
+
+            &_text {
+                text-align: left;
+            }
+        }
+        &_3D {
+            height: 100%;
+            aspect-ratio : 1 / 1;
+            background: $color-blue-darker;
+        }
+        
     }
 }
+
+
+.footer {
+    width: 100%;
+    height: 60px;
+    background-color: $color-blue-lighter;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    
+
+    
+        &_link {
+            color: $color-blue-primary;
+            text-decoration: underline;
+            font-weight: 600;
+            cursor: pointer;
+        }
+        &_text{
+            color: $color-blue-primary;
+            font-weight: 600;
+        }
+    
+        
+}
+
+
+
+
+    // .experience {
+    //     position: fixed;
+    //     width: 100vw;
+    //     height: 100vh;
+
+    //     .experience-canvas {
+    //         width: 100%;
+    //         width: 100%;
+    //         background-color: red;
+    //     }
+    // }
+
+
+
+
+

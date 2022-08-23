@@ -33,19 +33,23 @@ export default class Ocean {
                 });
             }
 
-            if (child.name === "Sea") {
-                // child.material = new THREE.MeshPhysicalMaterial();
-                // child.material.color.set(0xA6FBFF);
-                // child.material.roughness = 0;
-                // child.material.ior = 3;
-                // child.material.transmission = 0.9;
-                // child.material.specular = 0.5;
-                // child.material.opacity = 0;
-                // child.material.rotation = - Math.PI / 2;
-                // console.log(child);
-            }   
+            // if (child.name === "Sea") {
+            //     // child.material = new THREE.MeshPhysicalMaterial();
+            //     // child.material.color.set(0xA6FBFF);
+            //     // child.material.roughness = 0;
+            //     // child.material.ior = 3;
+            //     // child.material.transmission = 0.9;
+            //     // child.material.specular = 0.5;
+            //     // child.material.opacity = 0;
+            //     // child.material.rotation = - Math.PI / 2;
+            //     // console.log(child);
+            // }
+            
+
+
         });
         this.scene.add(this.actualOcean);
+        console.log(this.actualOcean);
 
         // Gestion de la dimension de l'avion
         this.actualOcean.scale.set(0.1, 0.1, 0.1);
@@ -67,11 +71,17 @@ export default class Ocean {
         console.log(this.ocean);
     }
 
+
+
     resize() {
 
     }
 
     update() {
-        this.mixer.update(this.time.delta * -0.001);
+        this.mixer.update(this.time.delta * 0.001);
     }
 }
+
+
+
+  

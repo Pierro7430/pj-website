@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+        <link rel="icon" type="image/svg+xml" href="./ressources/icons/favicon.svg" />
         <title>Pierre-Just Hédé-Haüy - Développeur Frontend</title>
         
 
@@ -16,10 +16,101 @@
         
     </head>
     <body>
+    
+        <header class="header">
+            <div class="logo">LOGO</div>
+            <nav class="nav">
+                <a href="">Accueil</a>
+                <a href="">Projets</a>
+                <a href="">Contact</a>
+            </nav>
+            <div class="theme">
+                <button class="theme_dark"></button>
+                <button class="theme_light"></button>
+            </div>
+        </header>
 
-        <div class="experience">
-            <canvas class="experience-canvas"></canvas>
-        </div>
+
+        <main class="main">
+
+            <div class="home">   
+                <div class="home_3D">
+                    <canvas class="home_3D_canvas"></canvas>
+                </div>      
+                <div class="home_info">
+                    <p class="home_info_title">Hello !</p>
+                    <p class="home_info_text">
+                        Je m’appelle Pierre-Just HÉDÉ-HAÜY<br>Après une première carrière dans le Design d’Espace et la 3D, j’ai choisi de me
+                        reconvertir dans le Développement Web. 
+                    </p>
+                    <a class="home_info_btn" href="./ressources/pdf/cv/CV Pierre-Just Hédé-Haüy.pdf" download="CV Pierre-Just Hédé-Haüy">Télécharger mon CV</a>
+                </div>
+            </div>
+            
+            <div class="projects">
+                <div class="projects_info">
+                    <p class="projects_info_title">Projets</p>
+                    <p class="projects_info_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum ex dolore possimus blanditiis quibusdam ullam esse labore ab quae quasi sunt, sint iste expedita eius, nulla asperiores accusamus odio exercitationem? Vous pouvez retrouver mes différents projets sur lesquels j'ai travaillé.</p>
+                </div>
+                <div class="projects_gallery">
+                    <div class="projects_gallery_work">
+                        <a class="project-link">
+                            <img src="" alt="">
+                        </a>                 
+                        <p class="project-description">#HTML5 #CSS #JS</p>
+                    </div>
+                    <div class="projects_gallery_work">
+                        <a class="project-link">
+                            <img src="" alt="">
+                        </a>                 
+                        <p class="project-description">#HTML5 #CSS #JS</p>
+                    </div>           
+                    <div class="projects_gallery_work">
+                        <a class="project-link">
+                            <img src="" alt="">
+                        </a>                 
+                        <p class="project-description">#HTML5 #CSS #JS</p>
+                    </div>           
+                    <div class="projects_gallery_work">
+                        <a class="project-link">
+                            <img src="" alt="">
+                        </a>                 
+                        <p class="project-description">#HTML5 #CSS #JS</p>
+                    </div>                     
+                </div>   
+            </div>
+
+            <div class="contact">
+                <div class="contact_info">
+                    <div class="contact_info_header">
+                        <p class="contact-title">Contact</p>
+                        <div class="contact-social">
+                            <a class="contact-social_link"></a>
+                            <a class="contact-social_link"></a>
+                            <a class="contact-social_link"></a>
+                        </div>
+                    </div>
+                    <p class="contact_info_text">Je vous attends !</p>
+                </div>
+                <div class="contact_3D">
+                    <canvas class="contact_3D_canvas"></canvas>
+                </div>
+            </div>
+
+        </main>
+
+        <footer class="footer">
+            <a class="footer_link">Mentions légales</a>
+            <a class="footer_link">Politique de confidentialité</a>
+            <p class="footer_text">Copyright @ 2022 Pierre-Just Hédé-Haüy</p>
+        </footer>
+
+
+        
+        <!-- <div class="experience">
+                <canvas class="experience-canvas"></canvas>
+            </div> -->
+        
 
 
         <script type="module" src="./main.js"></script>
