@@ -1,0 +1,67 @@
+@mixin light-mode {
+    color: $color-primary-1;
+
+    .header {
+        .nav_link {
+            color: $color-primary-1;
+        }
+
+        .theme_dark {
+            background-image: url(../../ressources/icons/moon--blue.svg);   
+        }
+    
+        .theme_light {
+            background-image: url(../../ressources/icons/sun--disabled.svg);   
+        }
+    }
+
+    
+
+    .home {
+        background-color: $color-primary-1--light-mode;
+
+        &_3D {
+            background-color: $color-primary-1-bonus--light-mode;  
+        }
+
+        &_info_text {
+            color: $color-primary-1;
+        }
+
+        &_info_btn {
+            background-color: $color-secondary--light-mode;
+        }
+    }
+
+    
+
+    .projects {
+        background-color: $color-primary-2--light-mode;
+
+        .project-link {
+            background-color: $color-white;
+    
+            &:hover {
+                background-color: $color-hover--light-mode;
+            }
+        }
+    }
+
+    
+
+    .contact {
+        background-color: $color-primary-1--light-mode;
+
+        &_3D {
+            background-color: $color-primary-1-bonus--light-mode;
+        }
+
+        .contact-social_link {
+            background-color: $color-secondary--light-mode; 
+        }
+    }
+
+    .footer {
+        background-color: $color-white;
+    }
+}

@@ -1,68 +1,85 @@
-
 .header {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 40px;
-    padding: 0px 50px;
+    height: $height-header;
+    padding: 0 50px;
     display: flex;
     justify-content: space-between;
-    align-items: flex-end;
+    align-items: center;
     z-index: 1000;
     box-sizing: border-box;
 
-    
-        .logo {
-    
+    .nav {
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+        gap: 50px;
+
+        &_link {
+            color: $color-white;
+            text-decoration: none;
+            font-size: $font-medium;
+            font-weight: 600;
         }
-    
-        .nav {
+    }
+
+    .theme {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 15px;
+
+        &_dark {
             display: flex;
             justify-content: center;
-            flex-grow: 1;
-            gap: 50px;
-    
-            a {
-                color: $color-white;
-                text-decoration: none;
-                font-size: $font-medium;
-                font-weight: 600;
-            }
+            align-items: center;
+            background-color: transparent;
+            background-image: url(../../ressources/icons/moon--disabled.svg);
+            border: none;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;           
         }
-    
-        .theme {
+
+        &_light {
             display: flex;
-            gap: 10px;
-    
-        }
-    
-        
+            justify-content: center;
+            align-items: center;
+            background-color: transparent;
+            background-image: url(../../ressources/icons/sun--white.svg);
+            border: none;
+            width: 24px;
+            height: 24px;
+            cursor: pointer;
+        }        
+    }      
 }
     
-.main {
+.home-container {
+
     .home {
         position: relative;
         width: 100%;
-        height: calc(100vh - 120px);
-        background-color: $color-blue-primary;
-        padding: 80px 0px 40px;
+        height: 100vh;
+        background-color: $color-primary-1;
+        padding: $height-header 50px 0;
         display: flex;
         align-items: center;
         justify-content: center;
-
-        
-    
-        &_3D{     
-            height: 100%;
+        box-sizing: border-box;
+   
+        &_3D {     
+            height: 90%;
             max-height: 800px;
             aspect-ratio : 1 / 1;
-            background: $color-blue-darker;
+            background-color: $color-primary-1-bonus;
         }
     
         &_info {
             position: absolute;
-            bottom: 20%; 
+            bottom: 15%; 
             left: 0;
             width: 100%;
             padding: 0 50px;
@@ -76,7 +93,7 @@
             
             &_text {
                 width: 40%;
-                color: $color-blue-lighter;
+                color: $color-primary-3;
                 font-size: $font-medium;
                 font-weight: 600;
                 line-height: $font-large;
@@ -85,24 +102,22 @@
             
             &_btn {
                 text-decoration: none;
-                color: $color-blue-primary;
-                background-color: $color-green;
+                color: $color-primary-1;
+                background-color: $color-secondary;
                 border-radius: 15px;
                 font-size: $font-regular;
                 font-weight: 900;
                 padding: 10px 25px;
-            }
-            
+            }           
         }
-    
     }
 
     .projects {
         position: relative;
         width: 100%;
-        height: calc(100vh - 80px);
-        background-color: $color-blue-secondary;
-        padding: 60px 0 20px;
+        height: calc(100vh - $height-header);
+        background-color: $color-primary-2;
+        padding: $height-header 0 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -122,14 +137,12 @@
             &_title {
                 font-size: $font-h1;
                 font-weight: 900;
-
             }
 
             &_text {
                 font-size: $font-medium;
                 font-weight: 600;
-                line-height: $font-large;
-                
+                line-height: $font-large;    
             }
         }
 
@@ -141,21 +154,29 @@
             padding: 0 50px;
             box-sizing: border-box;
             
-            
-            
-
             &_work {
                 width: 20%;
                 display: flex;
                 flex-direction: column;
                 gap: 15px;
-                
 
+                
+                
                 .project-link {
                     width: 100%;
                     aspect-ratio : 1 / 1;
-                    background-color: $color-blue-lighter;
+                    background-color: $color-primary-3;
                     cursor: pointer;
+
+                    &:hover {     
+                        background: url(../../ressources/icons/plus-circle--blue.svg) no-repeat center;
+                        background-color: $color-hover;
+                        background-size: 30%;
+                    }                 
+                }
+
+                .project-description {
+                    padding-bottom: 20px;
                 }
             }
         }
@@ -163,12 +184,12 @@
 
     .contact {
         position: relative;
-        height: calc(100vh - 140px);
-        background-color: $color-blue-primary;
-        padding: 80px 50px 0;
+        height: calc(100vh - ($height-header + $height-footer));
+        background-color: $color-primary-1;
+        padding: $height-header 50px 0;
         display: flex;
         justify-content: center;
-        text-align: center;
+        align-items: center;
 
         &_info {
             position: absolute;
@@ -201,7 +222,10 @@
                         width: 42px;
                         height: 42px;
                         border-radius: 21px;
-                        background-color: $color-green;  
+                        background-color: $color-secondary;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
                     }
                 }
             }
@@ -210,57 +234,34 @@
                 text-align: left;
             }
         }
+
         &_3D {
-            height: 100%;
+            height: 90%;
             aspect-ratio : 1 / 1;
-            background: $color-blue-darker;
-        }
-        
+            background-color: $color-primary-1-bonus;
+        }  
     }
 }
 
 
 .footer {
     width: 100%;
-    height: 60px;
-    background-color: $color-blue-lighter;
+    height: $height-footer;
+    background-color: $color-primary-3;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 40px;
     
+    &_link {
+        color: $color-primary-1;
+        text-decoration: underline;
+        font-weight: 600;
+        cursor: pointer;
+    }
 
-    
-        &_link {
-            color: $color-blue-primary;
-            text-decoration: underline;
-            font-weight: 600;
-            cursor: pointer;
-        }
-        &_text{
-            color: $color-blue-primary;
-            font-weight: 600;
-        }
-    
-        
+    &_text {
+        color: $color-primary-1;
+        font-weight: 600;
+    }  
 }
-
-
-
-
-    // .experience {
-    //     position: fixed;
-    //     width: 100vw;
-    //     height: 100vh;
-
-    //     .experience-canvas {
-    //         width: 100%;
-    //         width: 100%;
-    //         background-color: red;
-    //     }
-    // }
-
-
-
-
-

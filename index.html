@@ -17,23 +17,23 @@
     </head>
     <body>
     
-        <header class="header">
+        <header class="header section">
             <div class="logo">LOGO</div>
             <nav class="nav">
-                <a href="">Accueil</a>
-                <a href="">Projets</a>
-                <a href="">Contact</a>
+                <a class="nav_link" href="#home">Accueil</a>
+                <a class="nav_link" href="#projects">Projets</a>
+                <a class="nav_link" href="#contact">Contact</a>
             </nav>
             <div class="theme">
-                <button class="theme_dark"></button>
-                <button class="theme_light"></button>
+                <button id="sun" class="theme_light"></button>
+                <button id="moon" class="theme_dark"></button> 
             </div>
         </header>
 
 
-        <main class="main">
+        <main class="home-container">
 
-            <div class="home">   
+            <section class="home" id="home">   
                 <div class="home_3D">
                     <canvas class="home_3D_canvas"></canvas>
                 </div>      
@@ -45,49 +45,55 @@
                     </p>
                     <a class="home_info_btn" href="./ressources/pdf/cv/CV Pierre-Just Hédé-Haüy.pdf" download="CV Pierre-Just Hédé-Haüy">Télécharger mon CV</a>
                 </div>
-            </div>
+            </section>
             
-            <div class="projects">
+            <section class="projects section" id="projects">
                 <div class="projects_info">
                     <p class="projects_info_title">Projets</p>
-                    <p class="projects_info_text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum ex dolore possimus blanditiis quibusdam ullam esse labore ab quae quasi sunt, sint iste expedita eius, nulla asperiores accusamus odio exercitationem? Vous pouvez retrouver mes différents projets sur lesquels j'ai travaillé.</p>
+                    <p class="projects_info_text"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum ex dolore possimus blanditiis quibusdam ullam esse labore ab quae quasi sunt, sint iste expedita eius, nulla asperiores accusamus odio exercitationem? Vous pouvez retrouver mes différents projets sur lesquels j'ai travaillé.</p>
                 </div>
                 <div class="projects_gallery">
                     <div class="projects_gallery_work">
-                        <a class="project-link">
-                            <img src="" alt="">
-                        </a>                 
+                        <a class="project-link" href="./project.html">
+                            <img class="project-link_img" src="" alt="">
+                        </a>     
                         <p class="project-description">#HTML5 #CSS #JS</p>
                     </div>
                     <div class="projects_gallery_work">
-                        <a class="project-link">
+                        <a class="project-link" href="./project.html">
                             <img src="" alt="">
                         </a>                 
                         <p class="project-description">#HTML5 #CSS #JS</p>
                     </div>           
                     <div class="projects_gallery_work">
-                        <a class="project-link">
+                        <a class="project-link" href="./project.html">
                             <img src="" alt="">
                         </a>                 
                         <p class="project-description">#HTML5 #CSS #JS</p>
                     </div>           
                     <div class="projects_gallery_work">
-                        <a class="project-link">
+                        <a class="project-link" href="./project.html">
                             <img src="" alt="">
                         </a>                 
                         <p class="project-description">#HTML5 #CSS #JS</p>
                     </div>                     
                 </div>   
-            </div>
+            </section>
 
-            <div class="contact">
+            <section class="contact section" id="contact" >
                 <div class="contact_info">
                     <div class="contact_info_header">
                         <p class="contact-title">Contact</p>
                         <div class="contact-social">
-                            <a class="contact-social_link"></a>
-                            <a class="contact-social_link"></a>
-                            <a class="contact-social_link"></a>
+                            <a class="contact-social_link">
+                                <img src="./ressources/icons/mail--blue.svg" alt="">
+                            </a>
+                            <a class="contact-social_link">
+                                <img src="./ressources/icons/linkedin--blue.svg" alt="">
+                            </a>
+                            <a class="contact-social_link">
+                                <img src="./ressources/icons/codepen--blue.svg" alt="">
+                            </a>
                         </div>
                     </div>
                     <p class="contact_info_text">Je vous attends !</p>
@@ -95,14 +101,14 @@
                 <div class="contact_3D">
                     <canvas class="contact_3D_canvas"></canvas>
                 </div>
-            </div>
+            </section>
 
         </main>
 
         <footer class="footer">
             <a class="footer_link">Mentions légales</a>
             <a class="footer_link">Politique de confidentialité</a>
-            <p class="footer_text">Copyright @ 2022 Pierre-Just Hédé-Haüy</p>
+            <p class="footer_text">Copyright ⓒ 2022 Pierre-Just Hédé-Haüy</p>
         </footer>
 
 
