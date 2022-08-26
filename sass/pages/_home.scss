@@ -22,7 +22,13 @@
             text-decoration: none;
             font-size: $font-medium;
             font-weight: 600;
+
+            &.active {
+                border-bottom: 3px solid $color-secondary;
+            }
         }
+
+        
     }
 
     .theme {
@@ -59,6 +65,8 @@
     
 .home-container {
 
+    
+
     .home {
         position: relative;
         width: 100%;
@@ -69,6 +77,11 @@
         align-items: center;
         justify-content: center;
         box-sizing: border-box;
+
+
+        
+        
+
    
         &_3D {     
             height: 90%;
@@ -123,6 +136,8 @@
         justify-content: center;
         align-items: center;
         gap: 80px;
+
+        
 
         &_info {
             display: flex;
@@ -190,6 +205,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
+
+
+        
 
         &_info {
             position: absolute;

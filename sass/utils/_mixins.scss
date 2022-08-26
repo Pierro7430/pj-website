@@ -1,6 +1,6 @@
 @mixin light-mode {
     color: $color-primary-1;
-
+    // index
     .header {
         .nav_link {
             color: $color-primary-1;
@@ -14,8 +14,6 @@
             background-image: url(../../ressources/icons/sun--disabled.svg);   
         }
     }
-
-    
 
     .home {
         background-color: $color-primary-1--light-mode;
@@ -33,8 +31,6 @@
         }
     }
 
-    
-
     .projects {
         background-color: $color-primary-2--light-mode;
 
@@ -46,8 +42,6 @@
             }
         }
     }
-
-    
 
     .contact {
         background-color: $color-primary-1--light-mode;
@@ -64,4 +58,15 @@
     .footer {
         background-color: $color-white;
     }
+
+    // Project
+
+    .project-container {
+        background-color: $color-primary-1--light-mode;
+
+        .img-project {
+            background-color: $color-primary-2--light-mode;
+        }
+    }
+
 }
