@@ -22,10 +22,12 @@ const activeSectionHandler = (currentSectionId) => {{
 }};
 
 // set active Section
-
 const setActiveSection = (section)  => {
     activeSection = section;
 }
+
+
+
 
 const showPreviousSection = (section)  => {
     const previousSection = activeSection.previousElementSibling;
@@ -55,13 +57,6 @@ const keyEventHandler = (keycode) => {
 }
 
 
-
-
-
-
-
-
-
 // obervation des intersections des sections
 const sectionWatcherCallBack = (section, sectionWatcher) => {
     section.forEach(section => {
@@ -83,6 +78,7 @@ sections.forEach(section => {
     sectionWatcher.observe(section);
 });
 
+
 //event handler for keyboard
 
 window.addEventListener('keydown', (key) => {
@@ -97,52 +93,19 @@ window.addEventListener('keydown', (key) => {
     return;
 });
 
-const selectPreviousLink = (linkActiveId) => {
-    navLinks.forEach(link => {        
-        if(link.id === linkActiveId) {
-            let previousLinkActiveId = link.previousElementSibling;
-            if (previousLinkActiveId == null) {
-                return;
-            } 
-            let superLink = previousLinkActiveId.id;
-            console.log(superLink);
-            document.getElementById(superLink).click();
-            
-        }
-    })
-}
-
-const selectNextLink = (linkActiveId) => {
-    navLinks.forEach(link => {        
-        if(link.id === linkActiveId) {
-            let nextLinkActiveId = link.nextElementSibling;
-            console.log(nextLinkActiveId);
-            if (nextLinkActiveId == null) {
-                return;
-            }
-            let superLink = nextLinkActiveId.id;
-            console.log(superLink);
-            document.getElementById(superLink).click();
-
-
-        }
-    })
-}
 
 window.addEventListener('wheel', function(e)  {
-    let linkActive = document.getElementsByClassName('active');
-    let linkActiveId = linkActive[0].id;
-    
-
     if (e.deltaY < 0) {
-        console.log('up');
-        selectPreviousLink(linkActiveId);
+        e.preventDefault();
+        e.stopPropagation();
+        showPreviousSection();
     }
-    else {
-        console.log('down');
-        selectNextLink(linkActiveId)
+    else {   
+        e.preventDefault();
+        e.stopPropagation();
+        showNextSection();
     }
-});
+}, {passive:false});
 
 
     
