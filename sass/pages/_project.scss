@@ -1,4 +1,4 @@
-.project-container {
+.main-project {
     background-color: $color-primary-3;
     color: $color-primary-1;
 
@@ -24,27 +24,27 @@
             gap: 30px;
             padding: 60px 60px 0;
 
-            &_gallery {
+            &__gallery {
                 display: flex;
                 justify-content: space-between;
 
-                &_img {
+                .projet-illustration {
                     width: 50vh;
 
-                    .img-project {
+                    &__img {
                         width: 100%;
                         aspect-ratio : 1 / 1;
                         background-color: $color-primary-1;
                     }
 
-                    .img-description {
+                    &__description {
                         padding-top: 15px;
                     }
                 }
             }        
         }
 
-        .scroll-down {
+        .icon-scroll-down {
             position: absolute;
             bottom: 25px;
             right: 50%;
@@ -54,6 +54,7 @@
             background-repeat: no-repeat;
             background-position: center;
             background-size: cover;
+            cursor: pointer;
         }
     }
 }

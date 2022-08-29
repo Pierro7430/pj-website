@@ -1,16 +1,22 @@
 @mixin light-mode {
     color: $color-primary-1;
-    // index
+
+    // Page index
+
     .header {
-        .nav_link {
+        .nav__list__link {
             color: $color-primary-1;
+
+            &.active {
+                border-bottom: 3px solid $color-secondary--light-mode;
+            }
         }
 
-        .theme_dark {
+        .theme__dark {
             background-image: url(../../ressources/icons/moon--blue.svg);   
         }
     
-        .theme_light {
+        .theme__light {
             background-image: url(../../ressources/icons/sun--disabled.svg);   
         }
     }
@@ -18,15 +24,15 @@
     .home {
         background-color: $color-primary-1--light-mode;
 
-        &_3D {
+        &__3D {
             background-color: $color-primary-1-bonus--light-mode;  
         }
 
-        &_info_text {
+        &__info__text {
             color: $color-primary-1;
         }
 
-        &_info_btn {
+        &__info__btn {
             background-color: $color-secondary--light-mode;
         }
     }
@@ -34,7 +40,7 @@
     .projects {
         background-color: $color-primary-2--light-mode;
 
-        .project-link {
+        .project-card__link {
             background-color: $color-white;
     
             &:hover {
@@ -46,11 +52,11 @@
     .contact {
         background-color: $color-primary-1--light-mode;
 
-        &_3D {
+        &__3D {
             background-color: $color-primary-1-bonus--light-mode;
         }
 
-        .contact-social_link {
+        .contact-network__link {
             background-color: $color-secondary--light-mode; 
         }
     }
@@ -59,14 +65,46 @@
         background-color: $color-white;
     }
 
-    // Project
+    // --------------------------------------------------------------
 
-    .project-container {
+    // Page Project
+
+    .main-project {
         background-color: $color-primary-1--light-mode;
-
-        .img-project {
-            background-color: $color-primary-2--light-mode;
-        }
+        .full-page{
+            .projet-illustration__img {
+                background-color: $color-primary-2--light-mode;
+            }
+        } 
     }
+}
 
+
+
+// Small devices (landscape phones, 576px and up)
+@mixin mobile-large {
+    @media screen and (min-width: map-get($breakpoints, mobile-large)){
+        @content;
+    }
+}
+
+// Medium devices (tablets, 768px and up)
+@mixin tablet {
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        @content;
+    }
+}
+
+// Large devices (desktops, 992px and up)
+@mixin desktop {
+    @media screen and (min-width: map-get($breakpoints, desktop)){
+        @content;
+    }
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@mixin widescreen {
+    @media screen and (min-width: map-get($breakpoints, widescreen)){
+        @content;
+    }
 }

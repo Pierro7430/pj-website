@@ -37,7 +37,20 @@ $space-large: 1.25rem;
 $space-Xlarge: 1.5rem;
 
 
-$height-header: 60px;
-$height-footer: 60px;
 
 
+
+$breakpoints: (
+    "mobile-large": 576px,
+    "tablet": 768px,
+    "desktop": 992px,
+    "widescreen": 1200px,
+);
+
+//mobile
+$height-header: 30px;
+$height-footer: 30px;
+
+//widescreen
+$height-header--widescreen: 60px;
+$height-footer--widescreen: 60px;

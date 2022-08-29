@@ -1,7 +1,7 @@
 // query selector
 
 const sections = document.querySelectorAll('section');
-const navLinks = document.querySelectorAll('nav a');
+const navLinks = document.querySelectorAll('.nav__list__link');
 
 let activeSection;
 
@@ -45,17 +45,6 @@ const showNextSection = (section)  => {
     nextSection.scrollIntoView();
 }
 
-const keyEventHandler = (keycode) => {
-    switch (keycode) {
-        case 'ArrowUp':
-            showPreviousSection();
-            break;
-        case 'ArrowDown':
-            showNextSection();
-            break;
-    }
-}
-
 
 // obervation des intersections des sections
 const sectionWatcherCallBack = (section, sectionWatcher) => {
@@ -82,13 +71,13 @@ sections.forEach(section => {
 //event handler for keyboard
 
 window.addEventListener('keydown', (key) => {
-    if(key.code === 'ArrowUp') {
+    if(key.code === 'ArrowUp' || key.code === 'PageUp') {
         key.preventDefault();
-        keyEventHandler(key.code);
+        showPreviousSection();
     }
-    if(key.code === 'ArrowDown') {
+    if(key.code === 'ArrowDown' || key.code === 'PageDown' || key.code === 'Space') {
         key.preventDefault();
-        keyEventHandler(key.code);
+        showNextSection();
     }
     return;
 });
@@ -112,4 +101,4 @@ window.addEventListener('wheel', function(e)  {
 
     
 
-
+// window.addEventListener("resize", positionCalculation);
