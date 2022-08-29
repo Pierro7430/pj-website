@@ -26,7 +26,12 @@ const setActiveSection = (section)  => {
     activeSection = section;
 }
 
-
+const updateUrl = (newSection)  => {
+    const url = location.href.split("#")[0];
+    const newSectionId = newSection.id;
+    const newUrl = url + '#' + newSectionId;
+    location.href = newUrl;
+}
 
 
 const showPreviousSection = (section)  => {
@@ -35,6 +40,7 @@ const showPreviousSection = (section)  => {
         return;
     }
     previousSection.scrollIntoView();
+    updateUrl(previousSection);
 }
 
 const showNextSection = (section)  => {
@@ -43,6 +49,7 @@ const showNextSection = (section)  => {
         return;
     }
     nextSection.scrollIntoView();
+    updateUrl(nextSection);
 }
 
 

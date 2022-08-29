@@ -4,21 +4,21 @@ body {
 }
 
 h1 {
-    font-size: $font-h1;
+    font-size: $fs-4xl;
     font-weight: 900;
 }
 
 h2 {
-    font-size: $font-h2;
+    font-size: $fs-3xl;
     font-weight: 700;
 }
 
 h3 {
-    font-size: $font-h3;
+    font-size: $fs-2xl;
     font-weight: 500;
 }
 
 p {
-    font-size: $font-regular;
+    font-size: $fs-regular;
     font-weight: 400;
 }

@@ -21,24 +21,32 @@ $color-hover--light-mode:#fffffe99;;
 
 $color-white: #FFFFFE;
 
+$fs-xs: 0.75rem;
+$fs-small: 0.875rem;
+$fs-regular: 1rem;
+$fs-medium: 1.125rem;
+$fs-large: 1.25rem;
+$fs-xl: 1.5rem;
+$fs-2xl: 2rem;
+$fs-3xl: 4rem;
+$fs-4xl: 6rem;
 
-$font-regular: 1rem;
-$font-medium: 1.125rem;
-$font-large: 1.25rem;
-$font-Xlarge: 1.5rem;
-$font-h3: 2rem;
-$font-h2: 4rem;
-$font-h1: 6rem;
+$fw-small: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-large: 700;
+$fw-xl: 900;
 
 
-$space-regular: 50px;
-$space-medium: 100px;
-$space-large: 1.25rem;
-$space-Xlarge: 1.5rem;
-
-
-
-
+$space-2xs: 5px;
+$space-xs: 10px;
+$space-small: 15px;
+$space-regular: 20px;
+$space-medium: 25px;
+$space-large: 30px;
+$space-xl: 40px;
+$space-2xl: 50px;
+$space-3xl: 60px;
 
 $breakpoints: (
     "mobile-large": 576px,
@@ -48,8 +56,8 @@ $breakpoints: (
 );
 
 //mobile
-$height-header: 30px;
-$height-footer: 30px;
+$height-header: 40px;
+$height-footer: 50px;
 
 //widescreen
 $height-header--widescreen: 60px;

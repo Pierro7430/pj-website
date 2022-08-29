@@ -18,7 +18,7 @@
     <body>
     
         <header class="header">
-            <div class="logo">LOGO</div>
+            <div class="logo">PJ</div>
 
             <div class="burger-menu">
                 <input type="checkbox" id="burger-menu__toggle" class="burger-menu__checkbox" />
@@ -63,7 +63,7 @@
             <section id="projects" class="projects">
                 <div class="projects__info">
                     <p class="projects__info__title">Projets</p>
-                    <p class="projects__info__text"> Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum ex dolore possimus blanditiis quibusdam ullam esse labore ab quae quasi sunt, sint iste expedita eius, nulla asperiores accusamus odio exercitationem? Vous pouvez retrouver mes différents projets sur lesquels j'ai travaillé.</p>
+                    <p class="projects__info__text"> Mes projets récents.</p>
                 </div>
                 <div class="projects__gallery">
                     <div class="project-card">
@@ -72,7 +72,7 @@
                         </a>     
                         <p class="project-card__description">#HTML5 #CSS #JS</p>
                     </div>  
-                    <div class="project-card">
+                    <!-- <div class="project-card">
                         <a class="project-card__link" href="./project.html">
                             <img class="img-project" src="" alt="">
                         </a>     
@@ -89,7 +89,7 @@
                             <img class="img-project" src="" alt="">
                         </a>     
                         <p class="project-card__description">#HTML5 #CSS #JS</p>
-                    </div>                    
+                    </div>                     -->
                 </div>   
             </section>
 
@@ -97,17 +97,17 @@
                 <div class="contact__info">
                     <div class="contact__info__header">
                         <p class="contact-title">Contact</p>
-                        <div class="contact-network">
-                            <a class="contact-network__link">
-                                <img src="./ressources/icons/mail--blue.svg" alt="">
-                            </a>
-                            <a class="contact-network__link">
-                                <img src="./ressources/icons/linkedin--blue.svg" alt="">
-                            </a>
-                            <a class="contact-network__link">
-                                <img src="./ressources/icons/codepen--blue.svg" alt="">
-                            </a>
-                        </div>
+                        <ul class="contact-network">
+                            <li class="contact-network__icon">
+                                <a class="contact-link contact-link--mail"></a>
+                            </li>
+                            <li class="contact-network__icon">
+                                <a class="contact-link contact-link--linkedin"></a>
+                            </li>
+                            <li class="contact-network__icon">
+                                <a class="contact-link contact-link--codepen"></a>
+                            </li>
+                        </ul>
                     </div>
                     <p class="contact__info__text">Je vous attends !</p>
                 </div>
@@ -119,8 +119,10 @@
         </main>
 
         <footer class="footer">
-            <a class="footer__link">Mentions légales</a>
-            <a class="footer__link">Politique de confidentialité</a>
+            <ul class="footer__law">
+                <li><a class="link-law" href="#">Mentions légales</a></li>
+                <li><a class="link-law" href="#">Politique de confidentialité</a></li>
+            </ul>
             <p class="footer__text">Copyright ⓒ 2022 Pierre-Just Hédé-Haüy</p>
         </footer>
 
