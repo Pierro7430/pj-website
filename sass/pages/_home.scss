@@ -2,7 +2,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 100vw;
     height: $height-header;
     padding: 0 $space-regular;
     display: flex;
@@ -67,12 +67,12 @@
         align-items: center;
         justify-content: center;
         box-sizing: border-box;
+
    
         &__3D {
             width: 100%;
             height: 100%;
             background-color: $color-primary-1-bonus;
-            box-sizing: border-box;
 
             &__canvas {
                 width: 100%;
@@ -91,7 +91,7 @@
                 font-weight: $fw-large;
             }
    
-            &__text {
+            &__text > * {
                 color: $color-primary-3;
                 font-size: $fs-medium;
                 font-weight: $fw-medium;
@@ -115,7 +115,7 @@
         width: 100%;
         height: 100vh;
         background-color: $color-primary-2;
-        padding: $height-header 0 $space-regular;
+        padding: 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -123,57 +123,21 @@
         gap: $space-medium;
         box-sizing: border-box;
 
-        &__info {
-            width: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: $space-xs;
-            box-sizing: border-box;
-
-            &__title {
-                font-size: $fs-2xl;
-                font-weight: $fw-large;
-            }
-
-            &__text {
-                // text-align: center;
-                // font-size: $fs-regular;
-                // font-weight: $fw-medium;
-                // line-height: $fs-large;
-                display: none;   
-            }
-        }
-
         &__gallery {
             width: 100%;
+            height: 100%;
             display: flex;
-            align-items: center;
             justify-content: center;
-            box-sizing: border-box;
-            
-            .project-card {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                gap: $space-2xs;
+            align-items: center;
 
-                &__link {
-                    width: 100%;
-                    aspect-ratio : 1 / 1;
-                    background-color: $color-primary-3;
-                    cursor: pointer;
+            // -----------------------------------------
 
-                                   
-                }
-                &__description {
-                    text-align: center;
-                }
-            }
+            // the css is in the folder "component"
+
+            // -----------------------------------------
         }
     }
-
+            
     .contact {
         width: 100%;
         height: calc(100vh - ($height-footer));
@@ -191,7 +155,7 @@
             display: flex;
             flex-direction: column;
             gap: $space-regular;
-            box-sizing: border-box;
+
             
             &__header {
                 display: flex;
@@ -255,7 +219,6 @@
             width: 100%;
             flex: 1 0 0;
             background-color: $color-primary-1-bonus;
-            box-sizing: border-box;
 
             &__canvas {
                 width: 100%;
@@ -308,6 +271,13 @@
 
 
 
+
+	
+	
+
+
+	
+	
 
 
 

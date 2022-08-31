@@ -1,6 +1,6 @@
 import './style.scss';
-import './js/switchTheme.js';
-import './js/scroll.js';
+// import './js/switchTheme.js';
+// import './js/scroll.js';
 
 
 // import Experience from './Experience/Experience.js';

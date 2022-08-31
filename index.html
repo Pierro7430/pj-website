@@ -51,46 +51,111 @@
                     <canvas class="home__3D__canvas"></canvas>
                 </div>      
                 <div class="home__info">
-                    <p class="home__info__title">Hello !</p>
-                    <p class="home__info__text">
-                        Je m’appelle Pierre-Just HÉDÉ-HAÜY<br>Après une première carrière dans le Design d’Espace et la 3D, j’ai choisi de me
-                        reconvertir dans le Développement Web. 
-                    </p>
+                    <h3 class="home__info__title">Hello !</h3>
+                    <div class="home__info__text">
+                        <h1>Je m’appelle Pierre-Just HÉDÉ-HAÜY.</h1>
+                        <p>Après une première carrière dans le Design d’Espace et la 3D, j’ai choisi de me
+                        reconvertir dans le Développement Web.</p>
+                    </div>
                     <a class="home__info__btn" href="./ressources/pdf/cv/CV Pierre-Just Hédé-Haüy.pdf" download="CV Pierre-Just Hédé-Haüy">Télécharger mon CV</a>
                 </div>
             </section>
             
             <section id="projects" class="projects">
-                <div class="projects__info">
-                    <p class="projects__info__title">Projets</p>
-                    <p class="projects__info__text"> Mes projets récents.</p>
-                </div>
+
+
+                
+
+                
+                
+                <!-- <div class="projects__gallery">
+                    
+                </div> -->
+
                 <div class="projects__gallery">
-                    <div class="project-card">
-                        <a class="project-card__link" href="./project.html">
-                            <img class="img-project" src="" alt="">
-                        </a>     
-                        <p class="project-card__description">#HTML5 #CSS #JS</p>
-                    </div>  
+
+                    <!--  Mobile Gallery -->
+                    <div class="gallery-mobile">
+
+                        <!-- Don't wrap targets in parent -->
+                        <s id="slide1"></s> 
+                        <s id="slide2"></s>
+                        <s id="slide3"></s>
+                        <s id="slide4"></s>
+                            
+                        <div class="gallery-mobile__header">
+                            <h3 class="gallery-mobile__header__title">Mes projets</h3>
+                            <p class="gallery-mobile__header__text">Voici mes différents travaux passés ou en cours.</p>
+                        </div>
+                            
+                        <div class="gallery-mobile__slider">
+                            <div class="slide">
+                                <h2>Slide 1</h2>
+                                <img class="slide__img" src="./ressources/images/01.avif" alt="">
+                                <p></p>
+                            </div>
+                            <div class="slide">
+                                <h2>Slide 2</h2>
+                                <img class="slide__img" src="./ressources/images/02.avif" alt="">
+                                <p></p>
+                            </div>
+                            <div class="slide">
+                                <h2>Slide 3</h2>
+                                <img class="slide__img" src="./ressources/images/03.avif" alt="">
+                                <p></p>
+                            </div>
+                            <div class="slide">
+                                <h2>Slide 4</h2>
+                                <img class="slide__img" src="./ressources/images/04.avif" alt="">
+                                <p></p>
+                                
+                            </div>
+                        </div>
+                        
+                        <div class="gallery-mobile__nav">
+                                
+                            <div class="nav-btns"> 
+                                <a class="btn-slide btn-slide--prev" href="#slide4"></a>
+                                <a class="btn-slide btn-slide--next" href="#slide2"></a>		
+                            </div>
+                                
+                            <div class="nav-btns">
+                                <a class="btn-slide btn-slide--prev" href="#slide1"></a>
+                                <a class="btn-slide btn-slide--next" href="#slide3"></a>
+                            </div>
+                                
+                            <div class="nav-btns">
+                                <a class="btn-slide btn-slide--prev" href="#slide2"></a>
+                                <a class="btn-slide btn-slide--next" href="#slide4"></a>
+                            </div>
+                                
+                            <div class="nav-btns">
+                                <a class="btn-slide btn-slide--prev" href="#slide3"></a>
+                                <a class="btn-slide btn-slide--next" href="#slide1"></a>
+                            </div>
+                                
+                        </div>
+                        
+                        <div class="gallery-mobile__navbar">
+                            <a href="#slide1"></a>
+                            <a href="#slide2"></a>
+                            <a href="#slide3"></a>
+                            <a href="#slide4"></a>
+                        </div>
+                        
+                    </div>
+
+                    <!--  pc gallery -->
                     <!-- <div class="project-card">
                         <a class="project-card__link" href="./project.html">
                             <img class="img-project" src="" alt="">
                         </a>     
                         <p class="project-card__description">#HTML5 #CSS #JS</p>
-                    </div>          
-                    <div class="project-card">
-                        <a class="project-card__link" href="./project.html">
-                            <img class="img-project" src="" alt="">
-                        </a>     
-                        <p class="project-card__description">#HTML5 #CSS #JS</p>
-                    </div>         
-                    <div class="project-card">
-                        <a class="project-card__link" href="./project.html">
-                            <img class="img-project" src="" alt="">
-                        </a>     
-                        <p class="project-card__description">#HTML5 #CSS #JS</p>
-                    </div>                     -->
-                </div>   
+                    </div> -->
+                  
+                </div>
+
+
             </section>
 
             <section id="contact" class="contact">
