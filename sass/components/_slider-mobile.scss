@@ -3,68 +3,86 @@
     width: 100%;
     height: 100%; /* Or set a fixed height */
 	overflow: hidden;
-	color: #fff;	
+	color: $color-white;	
 	text-align: center;
     
-
     &__header {
-        margin-top: $height-header;
-        padding: $space-small 0;
+        padding: $padding-gallery-header;
+        height: $height-gallery-header;
         display: flex;
         flex-direction: column;
-        gap: $space-xs;
-
-        &__title {
-            font-size: $fs-2xl;
-            font-weight: $fw-large;
-        }
-
-        &__text {
-
-        }
+        justify-content: center;
+        align-items: center;
+        gap: $space-small;
     }
 	
 	&__slider {
         height: 100%;
-        white-space: nowrap;
-        font-size: 0;
+        white-space: nowrap; // gallery overflow
+        font-size: 0; // no space between elements (img)
+        // animation
         transition: 0.8s;
 		
 		.slide {
-			font-size: 1rem;
-			display: inline-flex;
-			flex-direction: column;
-			align-items: center;
-			justify-items: center;
-			align-content: center;
-			justify-content: center;
-			white-space: normal;
-			vertical-align: top;
-			height: 100%;
-			width: 100%;
-			background: none 50% no-repeat;
-			background-size: cover;
             position: relative;
+            height: 100%;
+			width: 100%;
+            white-space: normal; // reset overflow
+			display: inline-flex; // elements are on one line
+			flex-direction: column;
+            justify-content: center;
+			align-content: center;
+            justify-items: center;
+			align-items: center;
 
-            &__img {
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                left: 0;
-                right: 0;
-                width: 100%;
+            &__link {
                 height: 100%;
-                object-fit: cover;
+			    width: 100%;
+
+                &__img {
+                    height: 100%;
+			        width: 100%;
+                    object-position: 50% 50%;
+                    object-fit: cover;
+                }
             }
 		}
-
 	}
+
+    &__description {
+        position: absolute;
+		bottom: $position-gallery-description;
+		width: 100%;
+        white-space: nowrap; // gallery overflow
+        font-size: 0; // no space between elements (img)
+        z-index: 1;
+        // animation
+        transition: 0.8s;
+
+        .slide-caption {
+            height: 100%;
+			width: 100%;
+            white-space: normal; // reset overflow
+			display: inline-flex; // elements are on one line
+			flex-direction: column;
+            justify-content: center;
+			align-content: center;
+            justify-items: center;
+			align-items: center;
+            gap: $space-xs;
+
+            & > h2 {
+                font-size: $fs-2xl;
+                font-weight: $fw-large;
+            }
+        }
+    }
 	
 	&__nav {
 		position: absolute;
-		z-index: 1;
-		bottom: calc(50% - 70px);
+		bottom: $position-gallery-nav;
 		width: 100%;
+        z-index: 3;
 
 		
 		> div+div {
@@ -73,6 +91,7 @@
 		
 		.nav-btns {
 			.btn-slide {
+                border: 3px solid red;
                 position: absolute;
 				left: 0;
                 width: 60px;
@@ -84,7 +103,7 @@
                 background-color: transparent;
                 border: none;
                 cursor: pointer;
-
+                // animation
                 opacity: 0.7;
 				transition: 0.3s;
 				transform: translateY(-50%);
@@ -104,30 +123,29 @@
 	
 	&__navbar {
         position: absolute;
+        bottom: $position-gallery-navbar;
+		width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: $space-xs;
         z-index: 2;
-        bottom: 0;
-        padding: 10px 0;
-        width: 100%;
-        text-align: center;
-        
-        & a+a {
-            background: rgba(255, 255, 255, 0.5); /* Dim all but first */
-        }
-    
-    
+
         & > a {
-            display: inline-block;
-            width:       30px;
-            height:      30px;
-            line-height: 30px;
-            text-decoration: none;
-            text-align: center;
-            background: rgba(255, 255, 255, 1);
+            width: $height-gallery-navbar;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+            background: $color-white;
+            // animation
             transition: 0.3s;
             
             :hover {
-                background: rgba(255, 255, 255, 0.7) !important;
+                background: $color-white--transparent;
             }
+        }
+        
+        & a+a {
+            background: $color-white--transparent; /* Dim all but first */
         }
     }
 }
@@ -137,7 +155,7 @@
 // -----------------------------------------------------------------------
 /* SLIDER ANIMATION IMAGES*/
 #slide1:target ~ .gallery-mobile__slider {
-	transform: translateX(   0%); 
+	transform: translateX(0%); 
 }
 
 #slide2:target ~ .gallery-mobile__slider {
@@ -153,6 +171,29 @@
 }
 /* More slides? Add here more rules */
 // -----------------------------------------------------------------------
+
+
+
+// -----------------------------------------------------------------------
+/* SLIDER ANIMATION TITLES AND DESCRIPTIONS*/
+#slide1:target ~ .gallery-mobile__description {
+	transform: translateX(0%); 
+}
+
+#slide2:target ~ .gallery-mobile__description {
+	transform: translateX(-100%);
+}
+
+#slide3:target ~ .gallery-mobile__description {
+	transform: translateX(-200%);
+}
+
+#slide4:target ~ .gallery-mobile__description {
+	transform: translateX(-300%); 
+}
+/* More slides? Add here more rules */
+// -----------------------------------------------------------------------
+
 
 
 
@@ -185,39 +226,24 @@
 /* ANIMATION NAVBAR */
 /* ALL: */
 .gallery-mobile >s:target ~ .gallery-mobile__navbar >* {      
-	background: rgba(255, 255, 255, 0.5);
+	background: $color-white--transparent;
 }
 
 /* ACTIVE */
 #slide1:target ~ .gallery-mobile__navbar >*:nth-child(1) {
-	background: rgba(255, 255, 255,   1);
+	background: $color-white;
 }
 
 #slide2:target ~ .gallery-mobile__navbar >*:nth-child(2) {
-	background: rgba(255, 255, 255,   1);
+	background: $color-white;
 }
 
 #slide3:target ~ .gallery-mobile__navbar >*:nth-child(3) {
-	background: rgba(255, 255, 255,   1);
+	background: $color-white;
 }
 
 #slide4:target ~ .gallery-mobile__navbar >*:nth-child(4) {
-	background: rgba(255, 255, 255,   1);
+	background: $color-white;
 }
 /* More slides? Add here more rules */
 // -----------------------------------------------------------------------
-
-
-
-
-
-
-
-.gallery-mobile a {
-	border-radius: 50%;
-	margin: 0 3px;
-	color: rgba(0,0,0,0.8);
-	text-decoration: none;
-}
-
-/*** grid-specific styles ***/

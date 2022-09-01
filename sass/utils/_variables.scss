@@ -20,6 +20,7 @@ $color-secondary--light-mode: #FF8466;
 $color-hover--light-mode:#fffffe99;;
 
 $color-white: #FFFFFE;
+$color-white--transparent: #fffffe75;
 
 $fs-xs: 0.75rem;
 $fs-small: 0.875rem;
@@ -55,10 +56,42 @@ $breakpoints: (
     "widescreen": 1200px,
 );
 
-//mobile
-$height-header: 40px;
-$height-footer: 50px;
 
-//widescreen
-$height-header--widescreen: 60px;
-$height-footer--widescreen: 60px;
+
+
+
+// particular values
+
+    // mobile
+
+        // header
+        $height-header: 40px;
+      
+        // gallery
+
+            // header-gallery
+            $height-gallery-header: 15%;
+            $padding-top-gallery-header: $height-header;
+            $padding-bottom-gallery-header: $space-small;
+            $padding-gallery-header: $padding-top-gallery-header $space-regular $padding-bottom-gallery-header;
+
+            // slider-gallery
+            $height-gallery-slider: calc(100% - $height-gallery-header);
+            $calc-position-element: calc($height-gallery-slider - ($padding-top-gallery-header + $padding-bottom-gallery-header));
+
+            // description
+            $position-gallery-description: calc($calc-position-element * 70 / 100);
+
+            // nav-gallery
+            $position-gallery-nav: calc($calc-position-element * 50 / 100);
+
+            // navbar-gallery
+            $height-gallery-navbar: $space-medium;
+            $position-gallery-navbar: calc(($calc-position-element - $height-gallery-navbar) * 10 / 100);
+
+        // footer
+        $height-footer: 50px; 
+    //widescreen
+    //header
+    $height-header--widescreen: 60px;
+    $height-footer--widescreen: 60px;
