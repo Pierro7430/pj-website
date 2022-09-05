@@ -2,12 +2,3 @@ body, html {
     scroll-behavior: smooth;
     box-sizing: border-box;
 }
-
-input[type="radio"] {
-    position:absolute;
-    left:-100vw;
-}	
-    
-label {
-    cursor: pointer;
-}

@@ -20,23 +20,67 @@
         <header class="header">
             <div class="logo">PJ</div>
 
-            <div class="burger-menu">
+            <!-- <div class="menu">
                 <input type="checkbox" id="burger-menu__toggle" class="burger-menu__checkbox" />
-                <label for="burger-menu__toggle" class="button">
-                    <div class="icon-bar-horizontal"></div>
-                    <div class="icon-bar-horizontal"></div>
-                    <div class="icon-bar-horizontal"></div>
+                <label for="burger-menu__toggle" class="btn-burger">
+                    <a class="btn-burger" href="#nav">
+                        <div class="icon-bar icon-bar--diagonal-1"></div>
+                        <div class="icon-bar icon-bar--middle"></div>
+                        <div class="icon-bar icon-bar--diagonal-2"></div>
+                    </a>
                 </label>
+
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__list__link">
+                            <label for="burger-menu__toggle" class="unchecked-btn-burger">
+                                <a id="link-home" class="nav-link" href="#home" data-section="home">Accueil</a>
+                            </label>
+                        </li>
+                        <li class="nav__list__link">
+                            <label for="burger-menu__toggle" class="unchecked-btn-burger">
+                                <a id="link-projects" class="nav-link" href="#projects" data-section="projects">Projets</a>
+                            </label>
+                        </li>
+                        <li class="nav__list__link">
+                            <label for="burger-menu__toggle" class="unchecked-btn-burger">
+                                <a id="link-contact" class="nav-link" href="#contact" data-section="contact">Contact</a>
+                            </label>
+                        </li>
+                    </ul>
+                </nav>
+            </div> -->
+
+            <div class="menu">
+                <a class="btn-burger" href="#nav">
+                    <div class="icon-bar icon-bar--diagonal-1"></div>
+                    <div class="icon-bar icon-bar--middle"></div>
+                    <div class="icon-bar icon-bar--diagonal-2"></div>
+                </a>
+
+                
+
+                <nav class="nav" id="nav"> 
+                    <a class="btn-burger--closed" href="#">
+                        <div class="icon-bar icon-bar--diagonal-1--inverse"></div>
+                        <div class="icon-bar icon-bar--middle--inverse"></div>
+                        <div class="icon-bar icon-bar--diagonal-2--inverse"></div>
+                    </a>              
+                    <ul class="nav__list">
+                        <li class="nav__list__link">
+                            <a id="link-home" class="nav-link" href="#home" data-section="home">Accueil</a>
+                        </li>
+                        <li class="nav__list__link">    
+                            <a id="link-projects" class="nav-link" href="#projects" data-section="projects">Projets</a>
+                        </li>
+                        <li class="nav__list__link">
+                             <a id="link-contact" class="nav-link" href="#contact" data-section="contact">Contact</a>
+                        </li>
+                    </ul>
+                </nav>
             </div>
 
-            <nav class="nav">
-                <ul class="nav__list">
-                    <li><a id="link-home" class="nav__list__link" href="#home" data-section="home">Accueil</a></li>
-                    <li><a id="link-projects" class="nav__list__link" href="#projects" data-section="projects">Projets</a></li>
-                    <li><a id="link-contact" class="nav__list__link" href="#contact" data-section="contact">Contact</a></li>
-                </ul>
-            </nav>
-
+           
             <div class="theme">
                 <button id="icon-light" class="theme__light"></button>
                 <button id="icon-dark" class="theme__dark"></button> 
