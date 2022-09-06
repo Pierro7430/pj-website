@@ -18,54 +18,16 @@
     <body>
     
         <header class="header">
-            <div class="logo">PJ</div>
+            <a class="logo" href="#home">PJ</a>
 
-            <!-- <div class="menu">
-                <input type="checkbox" id="burger-menu__toggle" class="burger-menu__checkbox" />
-                <label for="burger-menu__toggle" class="btn-burger">
-                    <a class="btn-burger" href="#nav">
-                        <div class="icon-bar icon-bar--diagonal-1"></div>
-                        <div class="icon-bar icon-bar--middle"></div>
-                        <div class="icon-bar icon-bar--diagonal-2"></div>
-                    </a>
-                </label>
-
-                <nav class="nav">
-                    <ul class="nav__list">
-                        <li class="nav__list__link">
-                            <label for="burger-menu__toggle" class="unchecked-btn-burger">
-                                <a id="link-home" class="nav-link" href="#home" data-section="home">Accueil</a>
-                            </label>
-                        </li>
-                        <li class="nav__list__link">
-                            <label for="burger-menu__toggle" class="unchecked-btn-burger">
-                                <a id="link-projects" class="nav-link" href="#projects" data-section="projects">Projets</a>
-                            </label>
-                        </li>
-                        <li class="nav__list__link">
-                            <label for="burger-menu__toggle" class="unchecked-btn-burger">
-                                <a id="link-contact" class="nav-link" href="#contact" data-section="contact">Contact</a>
-                            </label>
-                        </li>
-                    </ul>
-                </nav>
-            </div> -->
 
             <div class="menu">
-                <a class="btn-burger" href="#nav">
-                    <div class="icon-bar icon-bar--diagonal-1"></div>
-                    <div class="icon-bar icon-bar--middle"></div>
-                    <div class="icon-bar icon-bar--diagonal-2"></div>
-                </a>
+                <a class="btn-burger" href="#nav"></a>
 
                 
 
                 <nav class="nav" id="nav"> 
-                    <a class="btn-burger--closed" href="#">
-                        <div class="icon-bar icon-bar--diagonal-1--inverse"></div>
-                        <div class="icon-bar icon-bar--middle--inverse"></div>
-                        <div class="icon-bar icon-bar--diagonal-2--inverse"></div>
-                    </a>              
+                    <a class="btn-burger--closed" href="javascript:history.go(-1)"></a>              
                     <ul class="nav__list">
                         <li class="nav__list__link">
                             <a id="link-home" class="nav-link" href="#home" data-section="home">Accueil</a>
@@ -90,7 +52,7 @@
 
         <main class="main-index">
 
-            <section id="home" class="home">   
+            <section id="home" class="home"> 
                 <div class="home__3D">
                     <canvas class="home__3D__canvas"></canvas>
                 </div>      

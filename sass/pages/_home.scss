@@ -13,7 +13,10 @@
 
     .logo {
         font-size: $fs-large;
-        font-weight: $fw-large;
+        font-weight: $fw-medium;
+        text-decoration: none;
+        color: $color-white;
+        z-index: 20;
     }
 
     .menu {
@@ -21,89 +24,17 @@
         justify-content: center;
         align-items: center;
 
-
-        // .burger-menu__checkbox {
-        //     position: absolute;
-        //     left:-100vw;
-
-        //     &:checked ~ .btn-burger > .icon-bar--middle {
-        //         opacity: 0;
-        //         transition: all 0.3s;
-        //     }
-
-        //     &:checked ~ .btn-burger > .icon-bar--diagonal-1 {
-        //         top: calc(50% - 1px);;
-        //         transform: rotate(45deg);
-        //         transition: all 0.3s;
-        //     }
-
-        //     &:checked ~ .btn-burger > .icon-bar--diagonal-2 {
-        //         bottom: calc(50% - 1px);
-        //         transform: rotate(-45deg);
-        //         transition: all 0.3s;
-        //     }
-
-        //     &:checked ~ .nav {
-        //         transform: translate(0);
-        //     }
-
-        // }	
-
         .btn-burger {
-            position: relative;
-            width: $space-regular;
-            height: $space-small;
+            width: $space-medium;
+            height: $space-medium;
+            background-image: url(../../ressources/icons/menu--white.svg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-color: transparent;
+            border: none;
             cursor: pointer;
-            z-index: 0;
-
-            .icon-bar {
-                width: 100%;
-                height: 2px;
-                background-color: $color-white;
-            }
-
-            .icon-bar--diagonal-1 {
-                position: absolute;
-                top: 0;
-                left: 0;
-                z-index: 20;
-                transition: all 0.3s;
-            }
-
-            .icon-bar--middle {
-                position: absolute;
-                top: calc(50% - 1px);
-                left: 0;
-                z-index: 20;
-                transition: all 0.3s;
-            }
-
-            .icon-bar--diagonal-2 {
-                position: absolute;
-                bottom: 0;
-                left: 0;
-                z-index: 20;
-                transition: all 0.3s;
-            }
-
-            &:active {
-                .icon-bar--middle {
-                    opacity: 0;
-                    transition: all 0.3s;
-                }
-
-                .icon-bar--diagonal-1 {
-                    top: calc(50% - 1px);;
-                    transform: rotate(45deg);
-                    transition: all 0.3s;
-                }
-            
-                .icon-bar--diagonal-2 {
-                    bottom: calc(50% - 1px);
-                    transform: rotate(-45deg);
-                    transition: all 0.3s;
-                }
-            } 
+            z-index: 0;      
         }
 
         
@@ -129,68 +60,20 @@
 
             .btn-burger--closed {
                 position: fixed;
-                top: 0;
+                top: calc(($height-header / 2) - ($space-medium / 2));
                 right: $space-regular;
-                width: $space-regular;
-                height: $height-header;
-                background-color: red;
+                width: $space-medium;
+                height: $space-medium;
+                background-image: url(../../ressources/icons/x.svg);
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-color: transparent;
+                border: none;
                 cursor: pointer;
-                z-index: 200;
-
-                .icon-bar {
-                    width: 100%;
-                    height: 2px;
-                    background-color: $color-white;
-                }
-             
-    
-                .icon-bar--diagonal-1--inverse {
-                    position: absolute;
-                    top: calc(50% - 1px);
-                    left: 0;
-                    z-index: 20;
-    
-                    transform: rotate(45deg);
-                    transition: all 0.3s;
-                }
-    
-                .icon-bar--middle--inverse {
-                    position: absolute;
-                    top: calc(50% - 1px);
-                    left: 0;
-                    z-index: 20;
-                    opacity: 0;
-                    transition: all 0.3s;
-                }
-    
-                .icon-bar--diagonal-2--inverse {
-                    position: absolute;
-                    bottom: calc(50% - 1px);
-                    left: 0;
-                    transform: rotate(-45deg);
-                    z-index: 20;
-                    transition: all 0.3s;
-                }
-    
-                &:active {
-                    .icon-bar--middle--inverse {
-                        opacity: 1;
-                        transition: all 0.3s;
-                    }
-    
-                    .icon-bar--diagonal-1--inverse {
-                        top: 0;
-                        transform: rotate(-45deg);
-                        transition: all 0.3s;
-                    }
-                
-                    .icon-bar--diagonal-2--inverse {
-                        bottom: 0;
-                        transform: rotate(45deg);
-                        transition: all 0.3s;
-                    }
-                } 
-            }
+                z-index: 25;  
+            } 
+        
             
             
             &__list {
@@ -229,7 +112,7 @@
     
 
     .theme {
-        display: none; //flex
+        display: flex; //flex
         justify-content: center;
         align-items: center;
         gap: $space-xs;
@@ -261,17 +144,39 @@
 }
     
 .main-index {
-
+    
     .home {
+        position: relative;
         width: 100%;
         height: 100vh;
-        background-color: $color-primary-1;
         padding: $height-header $space-regular 0;
+        background-color: #2B335A;
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
         box-sizing: border-box;
+        overflow: hidden;
+        z-index: -2;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -2500px;
+            right: -2500px;
+            width: 5000px;
+            aspect-ratio: 1 / 1;
+            background-image: conic-gradient(from 0deg at 50% 50%, #FEF1D9, #2B335A);
+            z-index: -1;
+
+            opacity: 0;
+
+            transform: rotate(0deg);
+            transition: transform 2s ease-in-out, opacity 1s 2s;
+          }
+
+
+
 
    
         &__3D {
