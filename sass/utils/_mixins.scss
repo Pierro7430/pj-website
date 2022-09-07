@@ -8,7 +8,7 @@
             color: $color-primary-1;
 
             &.active {
-                border-bottom: 3px solid $color-secondary--light-mode;
+                border-bottom: 3px solid $color-secondary--lightmode;
             }
         }
 
@@ -22,17 +22,15 @@
     }
 
     .home {
-        background-color: #FEF1D9;
+
         &::before {
             
-            transform: rotate(270deg);
-            opacity: 1;
-            transition: transform 2s ease-in-out, opacity 1s ease-in-out;
-            transition-delay: 0, 2s;
+            transform: rotate(-270deg);
+            transition: transform 2s ease-in-out;
           }
 
         &__3D {
-            background-color: $color-primary-1-bonus--light-mode;  
+            background-color: $color-primary-1-bonus--lightmode;  
         }
 
         &__info__text {
@@ -40,31 +38,31 @@
         }
 
         &__info__btn {
-            background-color: $color-secondary--light-mode;
+            background-color: $color-secondary--lightmode;
         }
     }
 
     .projects {
-        background-color: $color-primary-2--light-mode;
+        background-color: $color-primary-2--lightmode;
 
         .project-card__link {
             background-color: $color-white;
     
             &:hover {
-                background-color: $color-hover--light-mode;
+                background-color: $color-hover--lightmode;
             }
         }
     }
 
     .contact {
-        background-color: $color-primary-1--light-mode;
+        background-color: $color-primary-1--lightmode;
 
         &__3D {
-            background-color: $color-primary-1-bonus--light-mode;
+            background-color: $color-primary-1-bonus--lightmode;
         }
 
         .contact-network__link {
-            background-color: $color-secondary--light-mode; 
+            background-color: $color-secondary--lightmode; 
         }
     }
 
@@ -77,10 +75,10 @@
     // Page Project
 
     .main-project {
-        background-color: $color-primary-1--light-mode;
+        background-color: $color-primary-1--lightmode;
         .full-page{
             .projet-illustration__img {
-                background-color: $color-primary-2--light-mode;
+                background-color: $color-primary-2--lightmode;
             }
         } 
     }

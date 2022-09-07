@@ -20,14 +20,23 @@
         <header class="header">
             <a class="logo" href="#home">PJ</a>
 
+            <div class="theme">
+                <button id="icon-light" class="icon icon--light"></button>
+                <button id="icon-dark" class="icon icon--dark"></button> 
+            </div>
 
             <div class="menu">
-                <a class="btn-burger" href="#nav"></a>
+                <a class="icon icon--burger" href="#nav"></a>
 
-                
+                <nav class="nav" id="nav">
 
-                <nav class="nav" id="nav"> 
-                    <a class="btn-burger--closed" href="javascript:history.go(-1)"></a>              
+                    <header class="header">
+                        <a class="logo logo--anim" href="#home">PJ</a>
+
+                        <a class="icon icon--burger-closed" href="javascript:history.go(-1)"></a>              
+                    </header>
+
+                    
                     <ul class="nav__list">
                         <li class="nav__list__link">
                             <a id="link-home" class="nav-link" href="#home" data-section="home">Accueil</a>
@@ -40,12 +49,6 @@
                         </li>
                     </ul>
                 </nav>
-            </div>
-
-           
-            <div class="theme">
-                <button id="icon-light" class="theme__light"></button>
-                <button id="icon-dark" class="theme__dark"></button> 
             </div>
         </header>
 
@@ -68,8 +71,6 @@
             </section>
             
             <section id="projects" class="projects">
-
-                <div class="projects__gallery">
 
                     <!--  Mobile Gallery -->
                     <div class="gallery-mobile">
@@ -169,7 +170,7 @@
                         <p class="project-card__description">#HTML5 #CSS #JS</p>
                     </div> -->
                   
-                </div>
+
 
 
             </section>
@@ -177,7 +178,7 @@
             <section id="contact" class="contact">
                 <div class="contact__info">
                     <div class="contact__info__header">
-                        <p class="contact-title">Contact</p>
+                        <h3 class="contact-title">Contact</h3>
                         <ul class="contact-network">
                             <li class="contact-network__icon">
                                 <a class="contact-link contact-link--mail"></a>

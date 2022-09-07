@@ -1,4 +1,14 @@
 body, html {
     scroll-behavior: smooth;
     box-sizing: border-box;
+
+    .icon {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-color: transparent;
+        border: none;
+        cursor: pointer;
+    }
 }
+

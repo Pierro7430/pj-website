@@ -3,21 +3,22 @@ $color-primary-2: #5564AB;
 $color-primary-3: #C6CEF7;
 
 $color-primary-1-bonus: #d9d9d91a;
-$color-primary-1-bonus--light-mode: #E5DBCD;
+$color-primary-1-bonus--lightmode: #0018581a;
 
 $color-secondary: #65FFCB;
 
-$color-hover: #c6cef770;
+$color-hover: #c6cef74d;
+$color-hover--lightmode: #fffffe99;;
 
 
-$color-primary-1--light-mode: #FEF1D9;
-$color-primary-2--light-mode: #FFD78C;
+$color-primary-1--lightmode: #FEF1D9;
+$color-primary-2--lightmode: #FFD78C;
 
 
 
-$color-secondary--light-mode: #FF8466;
+$color-secondary--lightmode: #FF8466;
 
-$color-hover--light-mode:#fffffe99;;
+$color-hover--lightmode:#fffffe99;;
 
 $color-white: #FFFFFE;
 $color-white--transparent: #fffffe75;
@@ -49,6 +50,7 @@ $space-xl: 40px;
 $space-2xl: 50px;
 $space-3xl: 60px;
 
+
 $breakpoints: (
     "mobile-large": 576px,
     "tablet": 768px,
@@ -57,12 +59,11 @@ $breakpoints: (
 );
 
 
-
-
-
 // particular values
 
     // mobile
+
+    $padding-side: $space-regular;
 
         // header
         $height-header: 60px;
@@ -73,12 +74,12 @@ $breakpoints: (
             $height-gallery-header: 15%;
             $padding-top-gallery-header: $height-header;
             $padding-bottom-gallery-header: $space-small;
-            $padding-gallery-header: $padding-top-gallery-header $space-regular $padding-bottom-gallery-header;
+            $padding-gallery-header: $padding-top-gallery-header $padding-side $padding-bottom-gallery-header;
 
             // slider-gallery
             $height-gallery-slider: calc(100% - $height-gallery-header);
             $calc-position-element: calc($height-gallery-slider - ($padding-top-gallery-header + $padding-bottom-gallery-header));
-
+        
             // description
             $position-gallery-description: calc($calc-position-element * 70 / 100);
 

@@ -5,20 +5,33 @@ body {
 
 h1 {
     font-size: $fs-4xl;
-    font-weight: 900;
+    font-weight: $fw-xl;
+    line-height: normal;
 }
 
 h2 {
     font-size: $fs-3xl;
-    font-weight: 700;
+    font-weight: $fw-large;
+    line-height: normal;
 }
 
 h3 {
     font-size: $fs-2xl;
-    font-weight: 500;
+    font-weight: $fw-medium;
+    line-height: normal;
 }
 
 p {
     font-size: $fs-regular;
-    font-weight: 400;
+    font-weight: $fs-regular;
+    line-height: normal;
+}
+
+a {
+    text-decoration: none;
+    color: $color-white;
+}
+
+button {
+    text-decoration: none;
 }
