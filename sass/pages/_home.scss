@@ -3,8 +3,8 @@
     top: 0;
     left: 0;
     width: 100vw;
-    height: $height-header;
-    padding: 0 $padding-side;
+    height: $height--header;
+    padding: 0 $padding-side--global;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -101,13 +101,13 @@
         position: relative;
         width: 100%;
         height: 100vh;
-        padding: $height-header $padding-side 0;
+        padding: $height--header $padding-side--global 0;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
-        box-sizing: border-box;
+        align-items: center;
         overflow: hidden;
+        box-sizing: border-box;
   
         &::before {
             content: "";
@@ -116,7 +116,7 @@
             left: -2500px;
             width: 5000px;
             aspect-ratio: 1 / 1;
-            background-image: conic-gradient(from 0deg at 50% 50%, #2B335A 25%, #FEF1D9 75%);
+            background-image: conic-gradient(from 0deg at 50% 50%, $color-primary-1 25%, $color-primary-1--lightmode 75%);
             z-index: -5;
 
             transform: rotate(0deg);
@@ -154,26 +154,54 @@
                 color: $color-primary-1;
                 background-color: $color-secondary;
                 font-size: $fs-regular;
-                font-weight: $fw-medium;
+                font-weight: $fw-large;
             }           
         }
     }
 
     .projects {
+        position: relative;
         width: 100%;
         height: 100vh;
-        background-color: $color-primary-2;
-        padding: 0;
+        padding-top: $padding-top--projects;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: space-between;
         align-items: center;
-        gap: $space-medium;
-        box-sizing: border-box;
+        overflow: hidden;
+        box-sizing: border-box;    
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -2500px;
+            left: -2500px;
+            width: 5000px;
+            aspect-ratio: 1 / 1;
+            background-image: conic-gradient(from 0deg at 50% 50%, $color-primary-2 25%, $color-primary-2--lightmode 75%);
+            z-index: -5;
+
+            transform: rotate(0deg);
+            transition: transform 2s ease-in-out;
+        }
+
+        &__header {
+            width: 100%;
+            min-height: $height--projects-header;
+            padding: 0 $padding-side--global;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: $space-small;
+            text-align: center;
+            box-sizing: border-box;  
+        }
 
         &__gallery {
             width: 100%;
-            height: 100%;
+            height: $height--projects-gallery;
+            padding-top: $padding-top--projects-gallery;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -187,16 +215,31 @@
     }
             
     .contact {
+        position: relative;
         width: 100%;
-        height: calc(100vh - ($height-footer));
-        background-color: $color-primary-1;
-        padding: $height-header $padding-side 0;
+        height: $height--contact;
+        padding: $height--header $padding-side--global 0;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         gap: $space-regular;
+        overflow: hidden;
         box-sizing: border-box;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: -2500px;
+            left: -2500px;
+            width: 5000px;
+            aspect-ratio: 1 / 1;
+            background-image: conic-gradient(from 0deg at 50% 50%, $color-primary-1 25%, $color-primary-1--lightmode 75%);
+            z-index: -5;
+
+            transform: rotate(0deg);
+            transition: transform 2s ease-in-out;
+        }
 
         &__info {
             width: 100%;
@@ -231,9 +274,6 @@
                             height: 100%;
                             margin: $space-2xs;
                             background-size: contain;
-                            background-position: center;
-                            background-repeat: no-repeat;
-                            background-color: transparent;
                         }
 
                         .contact-link--mail {
@@ -268,9 +308,9 @@
 
 .footer {
     width: 100%;
-    height: $height-footer;
+    height: $height--footer;
     background-color: $color-primary-3;
-    padding: 0 $padding-side;
+    padding: 0 $padding-side--global;
     display: flex;
     flex-direction: column;
     justify-content: center;

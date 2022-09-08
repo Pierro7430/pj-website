@@ -2,37 +2,26 @@
     position: relative;
     width: 100%;
     height: 100%; /* Or set a fixed height */
-	overflow: hidden;
-	color: $color-white;	
-	text-align: center;
-    
-    &__header {
-        padding: $padding-gallery-header;
-        height: $height-gallery-header;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: $space-small;
+	overflow: hidden;	
+
+    &__anchor {
+        scroll-margin-top: $scroll-margin-top--projects-gallery;
     }
 	
 	&__slider {
         height: 100%;
         white-space: nowrap; // gallery overflow
         font-size: 0; // no space between elements (img)
-        // animation
+
         transition: 0.8s;
 		
 		.slide {
-            position: relative;
             height: 100%;
 			width: 100%;
             white-space: normal; // reset overflow
 			display: inline-flex; // elements are on one line
 			flex-direction: column;
             justify-content: center;
-			align-content: center;
-            justify-items: center;
 			align-items: center;
 
             &__link {
@@ -51,12 +40,11 @@
 
     &__description {
         position: absolute;
-		bottom: $position-gallery-description;
+		bottom: 60%;
 		width: 100%;
         white-space: nowrap; // gallery overflow
         font-size: 0; // no space between elements (img)
-        z-index: 1;
-        // animation
+
         transition: 0.8s;
 
         .slide-caption {
@@ -66,21 +54,18 @@
 			display: inline-flex; // elements are on one line
 			flex-direction: column;
             justify-content: center;
-			align-content: center;
-            justify-items: center;
 			align-items: center;
             gap: $space-xs;
 
             & > h2 {
                 font-size: $fs-2xl;
-                font-weight: $fw-large;
             }
         }
     }
 	
 	&__nav {
 		position: absolute;
-		bottom: $position-gallery-nav;
+		bottom: 50%;
 		width: 100%;
         z-index: 3;
 
@@ -91,19 +76,12 @@
 		
 		.nav-btns {
 			.btn-slide {
-                border: 3px solid red;
                 position: absolute;
 				left: 0;
                 width: 60px;
 				height: 60px;
                 background-image: url(../../ressources/icons/chevron-left--white.svg);
-                background-size: cover;
-                background-position: center;
-                background-repeat: no-repeat;
-                background-color: transparent;
-                border: none;
-                cursor: pointer;
-                // animation
+
                 opacity: 0.7;
 				transition: 0.3s;
 				transform: translateY(-50%);
@@ -123,20 +101,19 @@
 	
 	&__navbar {
         position: absolute;
-        bottom: $position-gallery-navbar;
+        bottom: 5%;
 		width: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
         gap: $space-xs;
-        z-index: 2;
+       
 
         & > a {
-            width: $height-gallery-navbar;
+            width: 20px;
             aspect-ratio: 1/1;
             border-radius: 50%;
-            background: $color-white;
-            // animation
+            background-color: $color-white;
             transition: 0.3s;
             
             :hover {

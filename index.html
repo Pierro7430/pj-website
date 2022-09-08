@@ -72,19 +72,21 @@
             
             <section id="projects" class="projects">
 
+                <div class="projects__header">
+                    <h3 class="projects__header__title">Mes projets</h3>
+                    <p class="projects__header__text">Voici mes différents travaux passés ou en cours.</p>
+                </div>
+
+                <div class="projects__gallery">
+                    
                     <!--  Mobile Gallery -->
                     <div class="gallery-mobile">
 
                         <!-- Don't wrap targets in parent -->
-                        <s id="slide1"></s> 
-                        <s id="slide2"></s>
-                        <s id="slide3"></s>
-                        <s id="slide4"></s>
-                            
-                        <div class="gallery-mobile__header">
-                            <h3 class="gallery-mobile__header__title">Mes projets</h3>
-                            <p class="gallery-mobile__header__text">Voici mes différents travaux passés ou en cours.</p>
-                        </div>
+                        <s id="slide1" class="gallery-mobile__anchor"></s> 
+                        <s id="slide2" class="gallery-mobile__anchor"></s>
+                        <s id="slide3" class="gallery-mobile__anchor"></s>
+                        <s id="slide4" class="gallery-mobile__anchor"></s>
                             
                         <div class="gallery-mobile__slider">
                             <div class="slide">
@@ -132,23 +134,23 @@
                         <div class="gallery-mobile__nav">
                                 
                             <div class="nav-btns"> 
-                                <a class="btn-slide btn-slide--prev" href="#slide4"></a>
-                                <a class="btn-slide btn-slide--next" href="#slide2"></a>		
+                                <a class="icon btn-slide btn-slide--prev" href="#slide4"></a>
+                                <a class="icon btn-slide btn-slide--next" href="#slide2"></a>		
                             </div>
                                 
                             <div class="nav-btns">
-                                <a class="btn-slide btn-slide--prev" href="#slide1"></a>
-                                <a class="btn-slide btn-slide--next" href="#slide3"></a>
+                                <a class="icon btn-slide btn-slide--prev" href="#slide1"></a>
+                                <a class="icon btn-slide btn-slide--next" href="#slide3"></a>
                             </div>
                                 
                             <div class="nav-btns">
-                                <a class="btn-slide btn-slide--prev" href="#slide2"></a>
-                                <a class="btn-slide btn-slide--next" href="#slide4"></a>
+                                <a class="icon btn-slide btn-slide--prev" href="#slide2"></a>
+                                <a class="icon btn-slide btn-slide--next" href="#slide4"></a>
                             </div>
                                 
                             <div class="nav-btns">
-                                <a class="btn-slide btn-slide--prev" href="#slide3"></a>
-                                <a class="btn-slide btn-slide--next" href="#slide1"></a>
+                                <a class="icon btn-slide btn-slide--prev" href="#slide3"></a>
+                                <a class="icon btn-slide btn-slide--next" href="#slide1"></a>
                             </div>
                                 
                         </div>
@@ -168,11 +170,8 @@
                             <img class="img-project" src="" alt="">
                         </a>     
                         <p class="project-card__description">#HTML5 #CSS #JS</p>
-                    </div> -->
-                  
-
-
-
+                    </div> -->                    
+                </div>
             </section>
 
             <section id="contact" class="contact">
@@ -181,13 +180,13 @@
                         <h3 class="contact-title">Contact</h3>
                         <ul class="contact-network">
                             <li class="contact-network__icon">
-                                <a class="contact-link contact-link--mail"></a>
+                                <a class="icon contact-link contact-link--mail"></a>
                             </li>
                             <li class="contact-network__icon">
-                                <a class="contact-link contact-link--linkedin"></a>
+                                <a class="icon contact-link contact-link--linkedin"></a>
                             </li>
                             <li class="contact-network__icon">
-                                <a class="contact-link contact-link--codepen"></a>
+                                <a class="icon contact-link contact-link--codepen"></a>
                             </li>
                         </ul>
                     </div>

@@ -1,71 +1,130 @@
 @mixin light-mode {
     color: $color-primary-1;
 
+    a {
+        color: $color-primary-1;
+    }
+
     // Page index
 
     .header {
-        .nav__list__link {
-            color: $color-primary-1;
+        
+        .theme {
 
-            &.active {
-                border-bottom: 3px solid $color-secondary--lightmode;
+            .icon--light {
+                background-image: url(../../ressources/icons/sun--disabled.svg);   
+            }
+
+            .icon--dark {
+                background-image: url(../../ressources/icons/moon--blue.svg);   
             }
         }
+        
+        .menu {     
 
-        .theme__dark {
-            background-image: url(../../ressources/icons/moon--blue.svg);   
-        }
-    
-        .theme__light {
-            background-image: url(../../ressources/icons/sun--disabled.svg);   
-        }
-    }
+            .icon--burger {
+                background-image: url(../../ressources/icons/menu--blue.svg); 
+            }
 
-    .home {
+            .nav {
+                background-color: $color-primary-1--lightmode;
 
-        &::before {
+                .header {
+
+                    .icon--burger-closed {
+                        background-image: url(../../ressources/icons/x--blue.svg); 
+                    }
+                }
+
+                &__list {
+
+                    .nav-link {
             
-            transform: rotate(-270deg);
-            transition: transform 2s ease-in-out;
-          }
-
-        &__3D {
-            background-color: $color-primary-1-bonus--lightmode;  
-        }
-
-        &__info__text {
-            color: $color-primary-1;
-        }
-
-        &__info__btn {
-            background-color: $color-secondary--lightmode;
-        }
+                        &:focus  {
+                            border-bottom: 3px solid $color-secondary--lightmode;
+                        }
+                    }
+                }       
+            }
+        }  
     }
 
-    .projects {
-        background-color: $color-primary-2--lightmode;
+    .main-index {
+        
+        .home {
 
-        .project-card__link {
-            background-color: $color-white;
+            &::before {
+                transform: rotate(-270deg);
+                transition: transform 2s ease-in-out;
+            }
+
+            &__3D {
+                background-color: $color-primary-1-bonus--lightmode;  
+            }
     
-            &:hover {
-                background-color: $color-hover--lightmode;
+            &__info {
+                &__text > * {
+                    color: $color-primary-1;
+                }
+    
+                &__btn {
+                    background-color: $color-secondary--lightmode;
+                }
+            }
+        }
+    
+        .projects {
+            
+            &::before {
+                transform: rotate(-270deg);
+                transition: transform 2s ease-in-out;
+            }
+
+            &__gallery {
+
+                .gallery-mobile {
+
+                    &__description {
+                        color: $color-white;
+                    }
+                }
+            }
+    
+            // .project-card__link {
+            //     background-color: $color-white;
+        
+            //     &:hover {
+            //         background-color: $color-hover--lightmode;
+            //     }
+            // }
+        }
+    
+        .contact {
+    
+            &::before {
+                transform: rotate(-270deg);
+                transition: transform 2s ease-in-out;
+            }
+
+            &__info {
+
+                &__header {
+
+                    .contact-network {
+
+                        &__icon {
+                            background-color: $color-secondary--lightmode;
+                        }
+                    }
+                }
+            }
+    
+            &__3D {
+                background-color: $color-primary-1-bonus--lightmode;
             }
         }
     }
-
-    .contact {
-        background-color: $color-primary-1--lightmode;
-
-        &__3D {
-            background-color: $color-primary-1-bonus--lightmode;
-        }
-
-        .contact-network__link {
-            background-color: $color-secondary--lightmode; 
-        }
-    }
-
+    
     .footer {
         background-color: $color-white;
     }
