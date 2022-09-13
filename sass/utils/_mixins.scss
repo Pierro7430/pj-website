@@ -144,7 +144,6 @@
 }
 
 
-
 // Small devices (landscape phones, 576px and up)
 @mixin mobile-large {
     @media screen and (min-width: map-get($breakpoints, mobile-large)){

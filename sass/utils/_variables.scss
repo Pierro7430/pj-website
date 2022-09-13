@@ -63,7 +63,8 @@ $breakpoints: (
 
     // mobile
 
-    $padding-side--global: $space-regular;
+    $padding-sides: $space-regular;
+    $padding-sides--mobile-large: $space-large;
 
         // header / footer
             $height--header: 60px;

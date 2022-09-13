@@ -4,13 +4,17 @@
     left: 0;
     width: 100vw;
     height: $height--header;
-    padding: 0 $padding-side--global;
+    padding: 0 $padding-sides;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: $space-regular;
     box-sizing: border-box;
     z-index: 5;
+
+    @include  mobile-large {
+        padding: 0 $padding-sides--mobile-large;
+    }
 
     .logo {
         font-size: $fs-large;
@@ -101,7 +105,7 @@
         position: relative;
         width: 100%;
         height: 100vh;
-        padding: $height--header $padding-side--global 0;
+        padding-top: $height--header;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -138,7 +142,12 @@
             display: flex;
             flex-direction: column;
             gap: $space-regular;
-            padding: $space-regular 0;
+            padding: $padding-sides;
+
+            @include  mobile-large {
+                gap: $space-large;
+                padding: $padding-sides--mobile-large;
+            }
    
             &__text > * {
                 color: $color-primary-3;
@@ -169,7 +178,7 @@
         justify-content: space-between;
         align-items: center;
         overflow: hidden;
-        box-sizing: border-box;    
+        box-sizing: border-box;   
 
         &::before {
             content: "";
@@ -188,14 +197,18 @@
         &__header {
             width: 100%;
             min-height: $height--projects-header;
-            padding: 0 $padding-side--global;
+            padding: 0 $padding-sides;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             gap: $space-small;
             text-align: center;
-            box-sizing: border-box;  
+            box-sizing: border-box;
+
+            @include  mobile-large {
+                padding: 0 $padding-sides--mobile-large;
+            }
         }
 
         &__gallery {
@@ -218,7 +231,7 @@
         position: relative;
         width: 100%;
         height: $height--contact;
-        padding: $height--header $padding-side--global 0;
+        padding-top: $height--header;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -226,6 +239,8 @@
         gap: $space-regular;
         overflow: hidden;
         box-sizing: border-box;
+
+        
 
         &::before {
             content: "";
@@ -243,10 +258,15 @@
 
         &__info {
             width: 100%;
+            padding: 0 $padding-sides;
             display: flex;
             flex-direction: column;
             gap: $space-regular;
+            box-sizing: border-box;
 
+            @include  mobile-large {
+                padding: 0 $padding-sides--mobile-large;
+            }
             
             &__header {
                 display: flex;
@@ -310,7 +330,7 @@
     width: 100%;
     height: $height--footer;
     background-color: $color-primary-3;
-    padding: 0 $padding-side--global;
+    padding: 0 $padding-sides;
     display: flex;
     flex-direction: column;
     justify-content: center;
