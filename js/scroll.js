@@ -5,8 +5,6 @@ const navLinks = document.querySelectorAll('.nav__list__link');
 
 let activeSection;
 
-
-
 // helper functions
 
 //ajoute la classe active au link à la section détectée comme intersection par l'observeur
@@ -21,6 +19,8 @@ const activeSectionHandler = (currentSectionId) => {{
 
 }};
 
+// -----------------------------------------------------------------------------------------
+
 // set active Section
 const setActiveSection = (section)  => {
     activeSection = section;
@@ -32,7 +32,6 @@ const updateUrl = (newSection)  => {
     const newUrl = url + '#' + newSectionId;
     location.href = newUrl;
 }
-
 
 const showPreviousSection = (section)  => {
     const previousSection = activeSection.previousElementSibling;
@@ -52,6 +51,7 @@ const showNextSection = (section)  => {
     updateUrl(nextSection);
 }
 
+// -----------------------------------------------------------------------------------------
 
 // obervation des intersections des sections
 const sectionWatcherCallBack = (section, sectionWatcher) => {
@@ -65,7 +65,7 @@ const sectionWatcherCallBack = (section, sectionWatcher) => {
 };
 
 const sectionWatcherOptions =  {
-    threshold: 0.6
+    threshold: 0.6,
 };
 
 const sectionWatcher = new IntersectionObserver(sectionWatcherCallBack, sectionWatcherOptions)
@@ -74,9 +74,12 @@ sections.forEach(section => {
     sectionWatcher.observe(section);
 });
 
+// -----------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------
 
-//event handler for keyboard
+//navigation
 
+//navigation keyboard
 window.addEventListener('keydown', (key) => {
     if(key.code === 'ArrowUp' || key.code === 'PageUp') {
         key.preventDefault();
@@ -89,7 +92,9 @@ window.addEventListener('keydown', (key) => {
     return;
 });
 
+// -----------------------------------------------------------------------------------------
 
+//navigation wheel
 window.addEventListener('wheel', function(e)  {
     if (e.deltaY < 0) {
         e.preventDefault();
@@ -103,9 +108,45 @@ window.addEventListener('wheel', function(e)  {
     }
 }, {passive:false});
 
+// -----------------------------------------------------------------------------------------
 
+//navigation touch
+// let start = null;
+
+// window.addEventListener('touchstart', function(e) {
+//     start = e.changedTouches[0];
+//     e.preventDefault();
+//     e.stopPropagation();
+// },{passive:false});
+
+
+// window.addEventListener('touchmove', function(e) {
     
+//   let end = e.changedTouches[0];
 
-    
+//   if(end.screenY - start.screenY > 0)
+//   {
+//       console.log('scrolling up');
+//       e.preventDefault();
+//       e.stopPropagation();
+//       showPreviousSection();
+//   }
+//   else if(end.screenY - start.screenY < 0)
+//   {
+//       console.log('scrolling down');
+//       e.preventDefault();
+//       e.stopPropagation();
+//       showNextSection();
+//   }
+// },{passive:false});
 
-// window.addEventListener("resize", positionCalculation);
+// -----------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------
+
+//resize
+window.addEventListener('resize', function(e) {
+    activeSection.scrollIntoView();
+});
+
+// -----------------------------------------------------------------------------------------
+// -----------------------------------------------------------------------------------------

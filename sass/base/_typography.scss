@@ -7,18 +7,42 @@ h1 {
     font-size: $fs-4xl;
     font-weight: $fw-xl;
     line-height: normal;
+
+    @include tablet {
+        font-size: $fs-5xl;
+    }
+
+    @include desktop {
+        font-size: $fs-6xl;
+    }
 }
 
 h2 {
     font-size: $fs-3xl;
     font-weight: $fw-large;
     line-height: normal;
+
+    @include tablet {
+        font-size: $fs-4xl;
+    }
+
+    @include desktop {
+        font-size: $fs-5xl;
+    }
 }
 
 h3 {
     font-size: $fs-2xl;
     font-weight: $fw-medium;
     line-height: normal;
+
+    @include tablet {
+        font-size: $fs-3xl;
+    }
+
+    @include desktop {
+        font-size: $fs-4xl;
+    }
 }
 
 p {

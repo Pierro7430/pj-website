@@ -12,7 +12,7 @@
         .theme {
 
             .icon--light {
-                background-image: url(../../ressources/icons/sun--disabled.svg);   
+                background-image: url(../../ressources/icons/sun--disabled.svg);
             }
 
             .icon--dark {
@@ -28,6 +28,9 @@
 
             .nav {
                 background-color: $color-primary-1--lightmode;
+                    @include desktop {
+                        background-color: transparent;
+                    }
 
                 .header {
 
@@ -88,15 +91,17 @@
                         color: $color-white;
                     }
                 }
+
+                .gallery-pc {
+
+                    .slide-card__link {
+
+                        &:hover {
+                            background-color: $color-hover--lightmode;
+                        }
+                    }
+                }      
             }
-    
-            // .project-card__link {
-            //     background-color: $color-white;
-        
-            //     &:hover {
-            //         background-color: $color-hover--lightmode;
-            //     }
-            // }
         }
     
         .contact {
@@ -112,8 +117,10 @@
 
                     .contact-network {
 
-                        &__icon {
-                            background-color: $color-secondary--lightmode;
+                        &__link {
+                            .icon--contact {
+                                background-color: $color-secondary--lightmode;
+                            }
                         }
                     }
                 }
@@ -135,7 +142,9 @@
 
     .main-project {
         background-color: $color-primary-1--lightmode;
+
         .full-page{
+
             .projet-illustration__img {
                 background-color: $color-primary-2--lightmode;
             }
@@ -157,6 +166,7 @@
         @content;
     }
 }
+
 
 // Large devices (desktops, 992px and up)
 @mixin desktop {

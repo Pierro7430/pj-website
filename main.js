@@ -5,12 +5,4 @@ import './js/scroll.js';
 
 // import Experience from './Experience/Experience.js';
 
-// const experience = new Experience(document.querySelector(".experience-canvas"));
-
-
-
-
-
-
-
-
+// const experience = new Experience(document.querySelector(".contact__3D__canvas"));

@@ -21,19 +21,19 @@
             <a class="logo" href="#home">PJ</a>
 
             <div class="theme">
-                <button id="icon-light" class="icon icon--light"></button>
-                <button id="icon-dark" class="icon icon--dark"></button> 
+                <button id="icon-light" class="icon icon--header icon--light"></button>
+                <button id="icon-dark" class="icon icon--header icon--dark"></button> 
             </div>
 
             <div class="menu">
-                <a class="icon icon--burger" href="#nav"></a>
+                <a class="icon icon--header icon--burger" href="#nav"></a>
 
                 <nav class="nav" id="nav">
 
-                    <header class="header">
+                    <header class="nav__header">
                         <a class="logo logo--anim" href="#home">PJ</a>
 
-                        <a class="icon icon--burger-closed" href="javascript:history.go(-1)"></a>              
+                        <a class="icon icon--header icon--burger-closed" href="javascript:history.go(-1)"></a>              
                     </header>
 
                     
@@ -60,7 +60,7 @@
                     <canvas class="home__3D__canvas"></canvas>
                 </div>      
                 <div class="home__info">
-                    <h3 class="home__info__title">Hello !</h3>
+                    <p class="home__info__title">Hello !</p>
                     <div class="home__info__text">
                         <h1>Je m’appelle Pierre-Just HÉDÉ-HAÜY.</h1>
                         <p>Après une première carrière dans le Design d’Espace et la 3D, j’ai choisi de me
@@ -73,7 +73,7 @@
             <section id="projects" class="projects">
 
                 <div class="projects__header">
-                    <h3 class="projects__header__title">Mes projets</h3>
+                    <h2 class="projects__header__title">Mes projets</h2>
                     <p class="projects__header__text">Voici mes différents travaux passés ou en cours.</p>
                 </div>
 
@@ -114,19 +114,19 @@
 
                         <div class="gallery-mobile__description">
                             <div class="slide-caption">
-                                <h2>Projet 1</h2>
+                                <h3>Projet 1</h3>
                                 <p>#HTML5 #CSS #JS</p>
                             </div>
                             <div class="slide-caption">
-                                <h2>Projet 2</h2>
+                                <h3>Projet 2</h3>
                                 <p>#HTML5 #CSS #JS</p>
                             </div>
                             <div class="slide-caption">
-                                <h2>Projet 3</h2>
+                                <h3>Projet 3</h3>
                                 <p>#HTML5 #CSS #JS</p>
                             </div>
                             <div class="slide-caption">
-                                <h2>Projet 4</h2>
+                                <h3>Projet 4</h3>
                                 <p>#HTML5 #CSS #JS</p>
                             </div>
                         </div>
@@ -165,28 +165,48 @@
                     </div>
 
                     <!--  pc gallery -->
-                    <!-- <div class="project-card">
-                        <a class="project-card__link" href="./project.html">
-                            <img class="img-project" src="" alt="">
-                        </a>     
-                        <p class="project-card__description">#HTML5 #CSS #JS</p>
-                    </div> -->                    
+                    <div class="gallery-pc">
+                        <div class="slide-card">
+                            <a class="slide-card__link" href="./slide.html">
+                                <img class="slide-card__link__img" src="./ressources/images/01.avif" alt="">
+                            </a>     
+                            <p class="slide-card__description">#HTML5 #CSS #JS</p>
+                        </div>
+                        <div class="slide-card">
+                            <a class="slide-card__link" href="./slide.html">
+                                <img class="slide-card__link__img" src="./ressources/images/02.avif" alt="">
+                            </a>     
+                            <p class="slide-card__description">#HTML5 #CSS #JS</p>
+                        </div>
+                        <div class="slide-card">
+                            <a class="slide-card__link" href="./slide.html">
+                                <img class="slide-card__link__img" src="./ressources/images/03.avif" alt="">
+                            </a>     
+                            <p class="slide-card__description">#HTML5 #CSS #JS</p>
+                        </div>
+                        <div class="slide-card">
+                            <a class="slide-card__link" href="./slide.html">
+                                <img class="slide-card__link__img" src="./ressources/images/04.avif" alt="">
+                            </a>     
+                            <p class="slide-card__description">#HTML5 #CSS #JS</p>
+                        </div>
+                    </div>                                      
                 </div>
             </section>
 
             <section id="contact" class="contact">
                 <div class="contact__info">
                     <div class="contact__info__header">
-                        <h3 class="contact-title">Contact</h3>
+                        <h2 class="contact-title">Contact</h2>
                         <ul class="contact-network">
-                            <li class="contact-network__icon">
-                                <a class="icon contact-link contact-link--mail"></a>
+                            <li class="contact-network__link">
+                                <a class="icon icon--contact icon--mail"></a>
                             </li>
-                            <li class="contact-network__icon">
-                                <a class="icon contact-link contact-link--linkedin"></a>
+                            <li class="contact-network__link">
+                                <a class="icon icon--contact icon--linkedin"></a>
                             </li>
-                            <li class="contact-network__icon">
-                                <a class="icon contact-link contact-link--codepen"></a>
+                            <li class="contact-network__link">
+                                <a class="icon icon--contact icon--codepen"></a>
                             </li>
                         </ul>
                     </div>
@@ -205,14 +225,7 @@
                 <li><a class="link-law" href="#">Politique de confidentialité</a></li>
             </ul>
             <p class="footer__text">Copyright ⓒ 2022 Pierre-Just Hédé-Haüy</p>
-        </footer>
-
-
-        
-        <!-- <div class="experience">
-                <canvas class="experience-canvas"></canvas>
-        </div> -->
-        
+        </footer>       
 
 
         <script type="module" src="./main.js"></script>

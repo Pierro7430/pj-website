@@ -8,37 +8,36 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: $space-regular;
+    gap: 5%;
     box-sizing: border-box;
     z-index: 5;
-
-    @include  mobile-large {
-        padding: 0 $padding-sides--mobile-large;
-    }
 
     .logo {
         font-size: $fs-large;
         font-weight: $fw-medium;
         flex-grow: 1;
+
+        @include tablet {
+            font-size: $fs-xl;
+        }
     }
 
     .theme {
         display: flex;
         justify-content: center;
         align-items: center;
-        gap: $space-xs;
+        gap: 20%;
 
+        @include desktop {
+            order: 3;
+        }
 
         .icon--dark {
-            width: $space-regular;
-            height: $space-regular;
-            background-image: url(../../ressources/icons/moon--disabled.svg);      
+            background-image: url(../../ressources/icons/moon--disabled.svg);    
         }
 
         .icon--light {
-            width: $space-regular;
-            height: $space-regular;
-            background-image: url(../../ressources/icons/sun--white.svg);
+            background-image: url(../../ressources/icons/sun--white.svg);    
         }        
     }      
 
@@ -47,10 +46,17 @@
         justify-content: center;
         align-items: center;
 
+        @include desktop {
+            width: 100%;
+            height: auto;
+        }
+
         .icon--burger {
-            width: $space-medium;
-            height: $space-medium;
-            background-image: url(../../ressources/icons/menu--white.svg);   
+            background-image: url(../../ressources/icons/menu--white.svg);
+            
+            @include desktop {
+                display: none;
+            }
         }
 
         .nav {
@@ -65,14 +71,46 @@
             align-items: center;
             z-index: 10;
     
-            transform: translateX(100vw);
+            transform: translateX(200vw);
             transition: transform 200ms ease-in-out;
 
-            .icon--burger-closed {
-                width: $space-large;
-                height: $space-large;
-                background-image: url(../../ressources/icons/x.svg); 
+            @include desktop {
+                position: relative;
+                width: 100%;
+                height: auto;
+                background-color: transparent;
+                transform: translateX(0);
+                transition: transform 0ms;
             }
+
+            &__header {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: $height--header;
+                padding: 0 $padding-sides;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: $space-regular;
+                box-sizing: border-box;
+                z-index: 5;
+
+                @include desktop {
+                    display: none;
+                }
+                
+                .icon--burger-closed {
+                    width: $space-large;
+                    height: $space-large;
+                    background-image: url(../../ressources/icons/x.svg); 
+                }
+
+                
+            }
+
+            
             
             &__list {
                 display: flex;
@@ -81,10 +119,20 @@
                 align-items: center;
                 gap: $space-2xl;
 
+                @include desktop {
+                    width: 100%;
+                    flex-direction: row;
+                    gap: 8%;
+                }
+
                 .nav-link {
                     background-color: transparent;
                     border: none;
                     font-size: $fs-2xl;
+
+                    @include desktop {
+                        font-size: $fs-large;
+                    }
 
                     &:focus {
                         border-bottom: 3px solid $color-secondary;
@@ -112,7 +160,7 @@
         align-items: center;
         overflow: hidden;
         box-sizing: border-box;
-  
+        
         &::before {
             content: "";
             position: absolute;
@@ -132,22 +180,51 @@
             height: 100%;
             background-color: $color-primary-1-bonus;
 
+            @include desktop {
+                width: auto;
+                height: 100%;
+                aspect-ratio : 1 / 1;
+                margin: $space-2xl 0;
+            }
+
             &__canvas {
                 width: 100%;
                 height: 10px;
             }
         }
-    
+       
         &__info {
             display: flex;
             flex-direction: column;
             gap: $space-regular;
             padding: $padding-sides;
 
-            @include  mobile-large {
+            @include mobile-large {
                 gap: $space-large;
-                padding: $padding-sides--mobile-large;
             }
+
+            @include desktop {
+                position: absolute;
+                bottom: 10%; 
+                left: $padding-sides;
+                width: 40%;
+                padding: 0;
+            }
+
+            &__title {
+                font-size: $fs-4xl;
+                font-weight: $fw-large;
+                line-height: normal;
+
+                @include tablet {
+                    font-size: $fs-5xl;
+                }
+
+                @include desktop {
+                    font-size: $fs-6xl;
+                }
+            }
+
    
             &__text > * {
                 color: $color-primary-3;
@@ -155,6 +232,7 @@
                 font-weight: $fw-medium;
                 line-height: $fs-large;
             }
+            
             
             &__btn {
                 width: fit-content;
@@ -172,13 +250,18 @@
         position: relative;
         width: 100%;
         height: 100vh;
-        padding-top: $padding-top--projects;
+        padding-top: $height--header;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         align-items: center;
         overflow: hidden;
-        box-sizing: border-box;   
+        box-sizing: border-box;
+
+        @include desktop {
+            justify-content: center;
+            gap: 10%;
+        }
 
         &::before {
             content: "";
@@ -196,35 +279,99 @@
 
         &__header {
             width: 100%;
-            min-height: $height--projects-header;
+            height: $height--projects-header;
             padding: 0 $padding-sides;
+            margin-bottom: $margin-bottom--projects-header;
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            justify-content: start;
             align-items: center;
             gap: $space-small;
             text-align: center;
             box-sizing: border-box;
-
-            @include  mobile-large {
-                padding: 0 $padding-sides--mobile-large;
-            }
         }
 
         &__gallery {
             width: 100%;
             height: $height--projects-gallery;
-            padding-top: $padding-top--projects-gallery;
             display: flex;
             justify-content: center;
             align-items: center;
 
+            @include desktop {
+                height: auto;
+                padding-top: 0;
+            }
+
             // -----------------------------------------
 
-            // the css is in the folder "component"
+            .gallery-mobile {
 
-            // -----------------------------------------
+                // the css is in the folder "component"
+                // -----------------------------------------
+
+                @include desktop {
+                    display: none;
+                }
+
+
+            }
+
+            .gallery-pc {
+                display: none;
+
+                @include desktop {
+
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    width: 100%;
+                    padding: 0  $padding-sides;
+                    box-sizing: border-box;
+                    
+                    .slide-card {
+                        width: 23%;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+        
+                        &__link {
+                            position: relative;
+                            width: 100%;
+                            aspect-ratio : 1 / 1;
+                            cursor: pointer;
+                            
+                            &:hover {     
+                                background: url(../../ressources/icons/plus-circle--blue.svg) no-repeat center;
+                                background-color: $color-hover;
+                                background-size: 30%;
+                            }
+
+                            &__img {
+                                position: absolute;
+			                    width: 100%;
+                                height: 100%;
+                                object-position: 50% 50%;
+                                object-fit: cover;
+                                z-index: -1;
+                            }
+                                          
+                        }
+        
+                        &__description {
+                            padding-bottom: 20px;
+                        }
+                    }
+                    
+                }
+
+            }
+            
+                
+                
         }
+            
+            
     }
             
     .contact {
@@ -240,7 +387,9 @@
         overflow: hidden;
         box-sizing: border-box;
 
-        
+        @include mobile-large {
+            gap: $space-large;
+        }
 
         &::before {
             content: "";
@@ -264,58 +413,75 @@
             gap: $space-regular;
             box-sizing: border-box;
 
-            @include  mobile-large {
-                padding: 0 $padding-sides--mobile-large;
+            @include mobile-large {
+                gap: $space-medium;
+            }
+
+            @include desktop {
+                position: absolute;
+                top: $height--header; 
+                left: $padding-sides;
+                width: 40%;
+                padding: 0;
             }
             
             &__header {
                 display: flex;
-                justify-content:space-between;
+                justify-content: space-between;
                 align-items: center;
+
+                @include tablet {
+                    gap: 8%;
+                }
                 
                 .contact-network {
+                    width: 100%;
                     display: flex;
-                    justify-content: center;
+                    justify-content: right;
                     align-items: center;
-                    gap: $space-xs;
+                    gap: 5%;
+                   
+                    @include tablet {
+                        justify-content: left;
+                        gap: 3%;    
+                    }
 
-                    &__icon {
-                        width: 30px;
-                        height: 30px;
-                        border-radius: 15px;
-                        background-color: $color-secondary;
+                    @include desktop {
+                        justify-content: left;
+                        gap: 7%;    
+                    }
+
+                    &__link {
                         display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        cursor: pointer;
-
-                        .contact-link {
-                            width: 100%;
-                            height: 100%;
-                            margin: $space-2xs;
-                            background-size: contain;
-                        }
-
-                        .contact-link--mail {
+                    
+                        .icon--mail {
                             background-image: url(../../ressources/icons/mail--blue.svg);
                         }
-
-                        .contact-link--linkedin {
+                    
+                        .icon--linkedin {
                             background-image: url(../../ressources/icons/linkedin--blue.svg);
                         }
 
-                        .contact-link--codepen {
+                        .icon--codepen {
                             background-image: url(../../ressources/icons/codepen--blue.svg);
-                        }                      
+                        }
                     }
+  
                 }
             }
         }
 
         &__3D {
             width: 100%;
-            flex: 1 0 0;
+            height: 100%;
             background-color: $color-primary-1-bonus;
+
+            @include desktop {
+                width: auto;
+                height: 100%;
+                aspect-ratio : 1 / 1;
+                margin: $space-2xl 0;
+            }
 
             &__canvas {
                 width: 100%;
@@ -338,18 +504,38 @@
     gap: $space-2xs;
     box-sizing: border-box;
     
+    @include mobile-large {
+        gap: $space-xs;
+    }
+
+    @include tablet {
+        padding: 0;
+        flex-direction: row;
+        justify-content: center;
+        gap: $space-xl;
+    }
+    
     &__law {
         width: 100%;
         display: flex;
         justify-content: space-between; 
-        align-items: center; 
+        align-items: left; 
+
+        @include tablet {
+            width: auto;
+            gap: $space-xl;
+        }
 
         .link-law {
             width: 100%;
             color: $color-primary-1;
             font-size: $fs-xs;
             font-weight: $fw-regular;
-            text-decoration: underline;   
+            text-decoration: underline;  
+            
+            @include  mobile-large {
+                font-size: $fs-small;
+            }
         }
     }
 
@@ -358,7 +544,11 @@
         font-size: $fs-xs;
         font-weight: $fw-regular;
         text-align: center;
-    }  
+
+        @include mobile-large {
+            font-size: $fs-small;
+        }
+    }
 }
 
 

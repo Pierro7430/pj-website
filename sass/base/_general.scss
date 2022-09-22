@@ -3,12 +3,38 @@ body, html {
     box-sizing: border-box;
 
     .icon {
+        aspect-ratio : 1 / 1;
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         background-color: transparent;
         border: none;
         cursor: pointer;
+        box-sizing: border-box;
+
+        &--header {
+            width: $space-medium;
+
+            @include tablet {
+                width: $space-large;
+            }
+        }
+
+        &--contact {
+            width: $space-large;   
+            background-size: 70%;
+            background-color: $color-secondary;
+            border-radius: 50%;
+        
+            @include tablet {
+                width: $space-xl;
+
+            }
+
+            @include desktop {
+                width: $space-2xl;
+            }
+        }
     }
 }
 

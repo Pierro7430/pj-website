@@ -85,12 +85,28 @@
                 opacity: 0.7;
 				transition: 0.3s;
 				transform: translateY(-50%);
+
+                @include mobile-large {
+                    left: $space-small;
+                }
+
+                @include tablet {
+                    left: $space-large;
+                }
 				
 				&--next {
                     left: auto;
                     right: 0;
                     background-image: url(../../ressources/icons/chevron-right--white.svg);
-				}
+                    
+                    @include mobile-large {
+                        right: $space-small;
+                    }
+
+                    @include tablet {
+                        right: $space-large;
+                    }
+                }
 				
 				&:hover {
 					opacity: 1;
