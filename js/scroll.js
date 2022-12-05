@@ -108,9 +108,9 @@ window.addEventListener('wheel', function(e)  {
     }
 }, {passive:false});
 
-// -----------------------------------------------------------------------------------------
+// // -----------------------------------------------------------------------------------------
 
-//navigation touch
+// //navigation touch
 // let start = null;
 
 // window.addEventListener('touchstart', function(e) {

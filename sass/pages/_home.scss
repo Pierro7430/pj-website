@@ -10,7 +10,7 @@
     align-items: center;
     gap: 5%;
     box-sizing: border-box;
-    z-index: 5;
+    z-index: 200;
 
     .logo {
         font-size: $fs-large;
@@ -23,22 +23,22 @@
     }
 
     .theme {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 20%;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        // gap: 20%;
 
         @include desktop {
             order: 3;
         }
 
-        .icon--dark {
-            background-image: url(../../ressources/icons/moon--disabled.svg);    
-        }
+        // .icon--dark {
+        //     background-image: url(../../ressources/icons/moon--disabled.svg);    
+        // }
 
-        .icon--light {
-            background-image: url(../../ressources/icons/sun--white.svg);    
-        }        
+        // .icon--light {
+        //     background-image: url(../../ressources/icons/sun--white.svg);    
+        // }
     }      
 
     .menu {
@@ -168,11 +168,12 @@
             left: -2500px;
             width: 5000px;
             aspect-ratio: 1 / 1;
-            background-image: conic-gradient(from 0deg at 50% 50%, $color-primary-1 25%, $color-primary-1--lightmode 75%);
+            background-color: $color-primary-1;
+            // background-image: conic-gradient(from 0deg at 50% 50%, $color-primary-1 25%, $color-primary-1--lightmode 75%);
             z-index: -5;
 
-            transform: rotate(0deg);
-            transition: transform 2s ease-in-out;
+            // transform: rotate(0deg);
+            // transition: transform 2s ease-in-out;
         }
 
         &__3D {
@@ -198,6 +199,7 @@
             flex-direction: column;
             gap: $space-regular;
             padding: $padding-sides;
+            position: relative;
 
             @include mobile-large {
                 gap: $space-large;
@@ -230,7 +232,16 @@
                 color: $color-primary-3;
                 font-size: $fs-medium;
                 font-weight: $fw-medium;
-                line-height: $fs-large;
+                line-height: 1.5;
+
+                @include tablet {
+                    font-size: $fs-large;
+                    line-height: 1.75;
+                }
+
+                & span {
+                    position: relative;
+                }
             }
             
             
@@ -270,11 +281,14 @@
             left: -2500px;
             width: 5000px;
             aspect-ratio: 1 / 1;
-            background-image: conic-gradient(from 0deg at 50% 50%, $color-primary-2 25%, $color-primary-2--lightmode 75%);
+
+            background-color: $color-primary-2;
+
+            // background-image: conic-gradient(from 0deg at 50% 50%, $color-primary-2 25%, $color-primary-2--lightmode 75%);
             z-index: -5;
 
-            transform: rotate(0deg);
-            transition: transform 2s ease-in-out;
+            // transform: rotate(0deg);
+            // transition: transform 2s ease-in-out;
         }
 
         &__header {
@@ -334,6 +348,8 @@
                         display: flex;
                         flex-direction: column;
                         gap: 15px;
+
+                        // transform-style: preserve-3d;
         
                         &__link {
                             position: relative;
@@ -391,18 +407,30 @@
             gap: $space-large;
         }
 
+        // &::before {
+        //     content: "";
+        //     position: absolute;
+        //     bottom: -2500px;
+        //     left: -2500px;
+        //     width: 5000px;
+        //     aspect-ratio: 1 / 1;
+        //     background-image: conic-gradient(from 0deg at 50% 50%, $color-primary-1 25%, $color-primary-1--lightmode 75%);
+        //     z-index: -5;
+
+        //     transform: rotate(0deg);
+        //     transition: transform 2s ease-in-out;
+        // }
         &::before {
             content: "";
             position: absolute;
-            bottom: -2500px;
-            left: -2500px;
-            width: 5000px;
-            aspect-ratio: 1 / 1;
-            background-image: conic-gradient(from 0deg at 50% 50%, $color-primary-1 25%, $color-primary-1--lightmode 75%);
-            z-index: -5;
+            bottom: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background-color: $color-primary-1;
+            z-index: -10;
 
-            transform: rotate(0deg);
-            transition: transform 2s ease-in-out;
+            // transition-delay: 1s;
         }
 
         &__info {
@@ -472,9 +500,24 @@
         }
 
         &__3D {
-            width: 100%;
-            height: 100%;
-            background-color: $color-primary-1-bonus;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -5;
+
+            // background-color: $color-primary-1-bonus;
+            // background-size: 100% 100%;
+            // background-position: 0px 0px;
+            // background-image: linear-gradient(0deg, #FFFFFFFF 30%, #FEF1D9 100%);
+
+
+            // background-size: 5% 100%;
+            // background-position: 5px 0px;
+            // background-image: linear-gradient(180deg, #FEF1D9 44%, #FFA351FF 100%);
+            
+            color: #332b13;
 
             @include desktop {
                 width: auto;
