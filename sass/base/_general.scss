@@ -1,6 +1,8 @@
 body, html {
     scroll-behavior: smooth;
     box-sizing: border-box;
+    position: relative;
+    // overflow: hidden;
 
     .icon {
         aspect-ratio : 1 / 1;
@@ -37,4 +39,5 @@ body, html {
         }
     }
 }
+
 
